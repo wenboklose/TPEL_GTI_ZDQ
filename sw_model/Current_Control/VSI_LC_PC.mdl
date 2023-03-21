@@ -1,0 +1,5332 @@
+Model {
+  Name			  "VSI_LC_PC"
+  Version		  7.8
+  MdlSubVersion		  0
+  GraphicalInterface {
+    NumRootInports	    0
+    NumRootOutports	    0
+    ParameterArgumentNames  ""
+    ComputedModelVersion    "1.6292"
+    NumModelReferences	    0
+    NumTestPointedSignals   0
+  }
+  SavedCharacterEncoding  "windows-1251"
+  SaveDefaultBlockParams  on
+  ScopeRefreshTime	  0.035000
+  OverrideScopeRefreshTime on
+  DisableAllScopes	  off
+  DataTypeOverride	  "UseLocalSettings"
+  DataTypeOverrideAppliesTo "AllNumericTypes"
+  MinMaxOverflowLogging	  "UseLocalSettings"
+  MinMaxOverflowArchiveMode "Overwrite"
+  FPTRunName		  "Run 1"
+  MaxMDLFileLineLength	  120
+  InitFcn		  "VSI_AFE_parameters_G1_s"
+  UserBdParams		  "PhysicalModelingChecksum;PhysicalModelingParameterChecksum;PhysicalModelingProducts"
+  PhysicalModelingChecksum "2440198441"
+  PhysicalModelingParameterChecksum "2227446842"
+  PhysicalModelingProducts "Power_System_Blocks"
+  Created		  "Tue Oct 19 10:16:50 2010"
+  Creator		  "marko"
+  UpdateHistory		  "UpdateHistoryNever"
+  ModifiedByFormat	  "%<Auto>"
+  LastModifiedBy	  "wenbo"
+  ModifiedDateFormat	  "%<Auto>"
+  LastModifiedDate	  "Tue Oct 15 23:20:58 2013"
+  RTWModifiedTimeStamp	  303778540
+  ModelVersionFormat	  "1.%<AutoIncrement:6292>"
+  ConfigurationManager	  "None"
+  SampleTimeColors	  off
+  SampleTimeAnnotations	  off
+  LibraryLinkDisplay	  "user"
+  WideLines		  off
+  ShowLineDimensions	  off
+  ShowPortDataTypes	  off
+  ShowDesignRanges	  off
+  ShowLoopsOnError	  on
+  IgnoreBidirectionalLines off
+  ShowStorageClass	  off
+  ShowTestPointIcons	  on
+  ShowSignalResolutionIcons on
+  ShowViewerIcons	  on
+  SortedOrder		  off
+  ExecutionContextIcon	  off
+  ShowLinearizationAnnotations on
+  BlockNameDataTip	  off
+  BlockParametersDataTip  off
+  BlockDescriptionStringDataTip	off
+  ToolBar		  on
+  StatusBar		  on
+  BrowserShowLibraryLinks off
+  BrowserLookUnderMasks	  off
+  SimulationMode	  "normal"
+  LinearizationMsg	  "none"
+  Profile		  off
+  ParamWorkspaceSource	  "MATLABWorkspace"
+  AccelSystemTargetFile	  "accel.tlc"
+  AccelTemplateMakefile	  "accel_default_tmf"
+  AccelMakeCommand	  "make_rtw"
+  TryForcingSFcnDF	  off
+  RecordCoverage	  off
+  CovPath		  "/"
+  CovSaveName		  "covdata"
+  CovMetricSettings	  "dw"
+  CovNameIncrementing	  off
+  CovHtmlReporting	  on
+  CovForceBlockReductionOff on
+  covSaveCumulativeToWorkspaceVar on
+  CovSaveSingleToWorkspaceVar on
+  CovCumulativeVarName	  "covCumulativeData"
+  CovCumulativeReport	  off
+  CovReportOnPause	  on
+  CovModelRefEnable	  "Off"
+  CovExternalEMLEnable	  off
+  ExtModeBatchMode	  off
+  ExtModeEnableFloating	  on
+  ExtModeTrigType	  "manual"
+  ExtModeTrigMode	  "normal"
+  ExtModeTrigPort	  "1"
+  ExtModeTrigElement	  "any"
+  ExtModeTrigDuration	  1000
+  ExtModeTrigDurationFloating "auto"
+  ExtModeTrigHoldOff	  0
+  ExtModeTrigDelay	  0
+  ExtModeTrigDirection	  "rising"
+  ExtModeTrigLevel	  0
+  ExtModeArchiveMode	  "off"
+  ExtModeAutoIncOneShot	  off
+  ExtModeIncDirWhenArm	  off
+  ExtModeAddSuffixToVar	  off
+  ExtModeWriteAllDataToWs off
+  ExtModeArmWhenConnect	  on
+  ExtModeSkipDownloadWhenConnect off
+  ExtModeLogAll		  on
+  ExtModeAutoUpdateStatusClock on
+  BufferReuse		  on
+  ShowModelReferenceBlockVersion on
+  ShowModelReferenceBlockIO off
+  Array {
+    Type		    "Handle"
+    Dimension		    1
+    Simulink.ConfigSet {
+      $ObjectID		      1
+      Version		      "1.11.1"
+      Array {
+	Type			"Handle"
+	Dimension		9
+	Simulink.SolverCC {
+	  $ObjectID		  2
+	  Version		  "1.11.1"
+	  StartTime		  "0"
+	  StopTime		  "0.5"
+	  AbsTol		  "1e-5"
+	  FixedStep		  "auto"
+	  InitialStep		  "auto"
+	  MaxNumMinSteps	  "-1"
+	  MaxOrder		  5
+	  ZcThreshold		  "auto"
+	  ConsecutiveZCsStepRelTol "10*128*eps"
+	  MaxConsecutiveZCs	  "1000"
+	  ExtrapolationOrder	  4
+	  NumberNewtonIterations  1
+	  MaxStep		  ".1e-6"
+	  MinStep		  "auto"
+	  MaxConsecutiveMinStep	  "10"
+	  RelTol		  "1e-4"
+	  SolverMode		  "Auto"
+	  ConcurrentTasks	  off
+	  Solver		  "ode23t"
+	  SolverName		  "ode23t"
+	  SolverJacobianMethodControl "auto"
+	  ShapePreserveControl	  "DisableAll"
+	  ZeroCrossControl	  "UseLocalSettings"
+	  ZeroCrossAlgorithm	  "Adaptive"
+	  AlgebraicLoopSolver	  "LineSearch"
+	  SolverResetMethod	  "Fast"
+	  PositivePriorityOrder	  off
+	  AutoInsertRateTranBlk	  off
+	  SampleTimeConstraint	  "Unconstrained"
+	  InsertRTBMode		  "Whenever possible"
+	}
+	Simulink.DataIOCC {
+	  $ObjectID		  3
+	  Version		  "1.11.1"
+	  Decimation		  "1"
+	  ExternalInput		  "[t, u]"
+	  FinalStateName	  "xFinal"
+	  InitialState		  "xInitial"
+	  LimitDataPoints	  off
+	  MaxDataPoints		  "1000"
+	  LoadExternalInput	  off
+	  LoadInitialState	  off
+	  SaveFinalState	  on
+	  SaveCompleteFinalSimState off
+	  SaveFormat		  "Array"
+	  SignalLoggingSaveFormat "ModelDataLogs"
+	  SaveOutput		  on
+	  SaveState		  off
+	  SignalLogging		  on
+	  DSMLogging		  on
+	  InspectSignalLogs	  off
+	  SaveTime		  on
+	  ReturnWorkspaceOutputs  off
+	  StateSaveName		  "xout"
+	  TimeSaveName		  "tout"
+	  OutputSaveName	  "yout"
+	  SignalLoggingName	  "logsout"
+	  DSMLoggingName	  "dsmout"
+	  OutputOption		  "RefineOutputTimes"
+	  OutputTimes		  "[]"
+	  ReturnWorkspaceOutputsName "out"
+	  Refine		  "1"
+	}
+	Simulink.OptimizationCC {
+	  $ObjectID		  4
+	  Version		  "1.11.1"
+	  Array {
+	    Type		    "Cell"
+	    Dimension		    6
+	    Cell		    "PassReuseOutputArgsAs"
+	    Cell		    "PassReuseOutputArgsThreshold"
+	    Cell		    "ZeroExternalMemoryAtStartup"
+	    Cell		    "ZeroInternalMemoryAtStartup"
+	    Cell		    "OptimizeModelRefInitCode"
+	    Cell		    "NoFixptDivByZeroProtection"
+	    PropName		    "DisabledProps"
+	  }
+	  BlockReduction	  on
+	  BooleanDataType	  on
+	  ConditionallyExecuteInputs on
+	  InlineParams		  off
+	  UseIntDivNetSlope	  off
+	  UseFloatMulNetSlope	  off
+	  UseSpecifiedMinMax	  off
+	  InlineInvariantSignals  off
+	  OptimizeBlockIOStorage  on
+	  BufferReuse		  on
+	  EnhancedBackFolding	  off
+	  StrengthReduction	  off
+	  ExpressionFolding	  on
+	  BooleansAsBitfields	  off
+	  BitfieldContainerType	  "uint_T"
+	  EnableMemcpy		  on
+	  MemcpyThreshold	  64
+	  PassReuseOutputArgsAs	  "Structure reference"
+	  ExpressionDepthLimit	  2147483647
+	  FoldNonRolledExpr	  on
+	  LocalBlockOutputs	  on
+	  RollThreshold		  5
+	  SystemCodeInlineAuto	  off
+	  StateBitsets		  off
+	  DataBitsets		  off
+	  UseTempVars		  off
+	  ZeroExternalMemoryAtStartup on
+	  ZeroInternalMemoryAtStartup on
+	  InitFltsAndDblsToZero	  off
+	  NoFixptDivByZeroProtection off
+	  EfficientFloat2IntCast  off
+	  EfficientMapNaN2IntZero on
+	  OptimizeModelRefInitCode off
+	  LifeSpan		  "inf"
+	  MaxStackSize		  "Inherit from target"
+	  BufferReusableBoundary  on
+	  SimCompilerOptimization "Off"
+	  AccelVerboseBuild	  off
+	  AccelParallelForEachSubsystem	on
+	}
+	Simulink.DebuggingCC {
+	  $ObjectID		  5
+	  Version		  "1.11.1"
+	  RTPrefix		  "error"
+	  ConsistencyChecking	  "none"
+	  ArrayBoundsChecking	  "none"
+	  SignalInfNanChecking	  "none"
+	  SignalRangeChecking	  "none"
+	  ReadBeforeWriteMsg	  "UseLocalSettings"
+	  WriteAfterWriteMsg	  "UseLocalSettings"
+	  WriteAfterReadMsg	  "UseLocalSettings"
+	  AlgebraicLoopMsg	  "warning"
+	  ArtificialAlgebraicLoopMsg "warning"
+	  SaveWithDisabledLinksMsg "warning"
+	  SaveWithParameterizedLinksMsg	"warning"
+	  CheckSSInitialOutputMsg on
+	  UnderspecifiedInitializationDetection	"Classic"
+	  MergeDetectMultiDrivingBlocksExec "none"
+	  CheckExecutionContextPreStartOutputMsg off
+	  CheckExecutionContextRuntimeOutputMsg	off
+	  SignalResolutionControl "UseLocalSettings"
+	  BlockPriorityViolationMsg "warning"
+	  MinStepSizeMsg	  "warning"
+	  TimeAdjustmentMsg	  "none"
+	  MaxConsecutiveZCsMsg	  "error"
+	  MaskedZcDiagnostic	  "warning"
+	  IgnoredZcDiagnostic	  "none"
+	  SolverPrmCheckMsg	  "warning"
+	  InheritedTsInSrcMsg	  "warning"
+	  DiscreteInheritContinuousMsg "warning"
+	  MultiTaskDSMMsg	  "error"
+	  MultiTaskCondExecSysMsg "error"
+	  MultiTaskRateTransMsg	  "error"
+	  SingleTaskRateTransMsg  "none"
+	  TasksWithSamePriorityMsg "warning"
+	  SigSpecEnsureSampleTimeMsg "warning"
+	  CheckMatrixSingularityMsg "none"
+	  IntegerOverflowMsg	  "warning"
+	  Int32ToFloatConvMsg	  "warning"
+	  ParameterDowncastMsg	  "error"
+	  ParameterOverflowMsg	  "error"
+	  ParameterUnderflowMsg	  "none"
+	  ParameterPrecisionLossMsg "warning"
+	  ParameterTunabilityLossMsg "warning"
+	  FixptConstUnderflowMsg  "none"
+	  FixptConstOverflowMsg	  "none"
+	  FixptConstPrecisionLossMsg "none"
+	  UnderSpecifiedDataTypeMsg "none"
+	  UnnecessaryDatatypeConvMsg "none"
+	  VectorMatrixConversionMsg "none"
+	  InvalidFcnCallConnMsg	  "error"
+	  FcnCallInpInsideContextMsg "Use local settings"
+	  SignalLabelMismatchMsg  "none"
+	  UnconnectedInputMsg	  "warning"
+	  UnconnectedOutputMsg	  "warning"
+	  UnconnectedLineMsg	  "warning"
+	  SFcnCompatibilityMsg	  "none"
+	  FrameProcessingCompatibilityMsg "warning"
+	  UniqueDataStoreMsg	  "none"
+	  BusObjectLabelMismatch  "warning"
+	  RootOutportRequireBusObject "warning"
+	  AssertControl		  "UseLocalSettings"
+	  EnableOverflowDetection off
+	  ModelReferenceIOMsg	  "none"
+	  ModelReferenceMultiInstanceNormalModeStructChecksumCheck "error"
+	  ModelReferenceVersionMismatchMessage "none"
+	  ModelReferenceIOMismatchMessage "none"
+	  ModelReferenceCSMismatchMessage "none"
+	  UnknownTsInhSupMsg	  "warning"
+	  ModelReferenceDataLoggingMessage "warning"
+	  ModelReferenceSymbolNameMessage "warning"
+	  ModelReferenceExtraNoncontSigs "error"
+	  StateNameClashWarn	  "warning"
+	  SimStateInterfaceChecksumMismatchMsg "warning"
+	  SimStateOlderReleaseMsg "error"
+	  InitInArrayFormatMsg	  "warning"
+	  StrictBusMsg		  "Warning"
+	  BusNameAdapt		  "WarnAndRepair"
+	  NonBusSignalsTreatedAsBus "none"
+	  LoggingUnavailableSignals "error"
+	  BlockIODiagnostic	  "none"
+	  SFUnusedDataAndEventsDiag "warning"
+	  SFUnexpectedBacktrackingDiag "warning"
+	  SFInvalidInputDataAccessInChartInitDiag "warning"
+	  SFNoUnconditionalDefaultTransitionDiag "warning"
+	  SFTransitionOutsideNaturalParentDiag "warning"
+	  SFUnconditionalTransitionShadowingDiag "warning"
+	}
+	Simulink.HardwareCC {
+	  $ObjectID		  6
+	  Version		  "1.11.1"
+	  ProdBitPerChar	  8
+	  ProdBitPerShort	  16
+	  ProdBitPerInt		  32
+	  ProdBitPerLong	  32
+	  ProdBitPerFloat	  32
+	  ProdBitPerDouble	  64
+	  ProdBitPerPointer	  32
+	  ProdLargestAtomicInteger "Char"
+	  ProdLargestAtomicFloat  "None"
+	  ProdIntDivRoundTo	  "Undefined"
+	  ProdEndianess		  "Unspecified"
+	  ProdWordSize		  32
+	  ProdShiftRightIntArith  on
+	  ProdHWDeviceType	  "32-bit Generic"
+	  TargetBitPerChar	  8
+	  TargetBitPerShort	  16
+	  TargetBitPerInt	  32
+	  TargetBitPerLong	  32
+	  TargetBitPerFloat	  32
+	  TargetBitPerDouble	  64
+	  TargetBitPerPointer	  32
+	  TargetLargestAtomicInteger "Char"
+	  TargetLargestAtomicFloat "None"
+	  TargetShiftRightIntArith on
+	  TargetIntDivRoundTo	  "Undefined"
+	  TargetEndianess	  "Unspecified"
+	  TargetWordSize	  32
+	  TargetTypeEmulationWarnSuppressLevel 0
+	  TargetPreprocMaxBitsSint 32
+	  TargetPreprocMaxBitsUint 32
+	  TargetHWDeviceType	  "Specified"
+	  TargetUnknown		  off
+	  ProdEqTarget		  on
+	}
+	Simulink.ModelReferenceCC {
+	  $ObjectID		  7
+	  Version		  "1.11.1"
+	  UpdateModelReferenceTargets "IfOutOfDateOrStructuralChange"
+	  CheckModelReferenceTargetMessage "error"
+	  EnableParallelModelReferenceBuilds off
+	  ParallelModelReferenceErrorOnInvalidPool on
+	  ParallelModelReferenceMATLABWorkerInit "None"
+	  ModelReferenceNumInstancesAllowed "Multi"
+	  PropagateVarSize	  "Infer from blocks in model"
+	  ModelReferencePassRootInputsByReference on
+	  ModelReferenceMinAlgLoopOccurrences off
+	  PropagateSignalLabelsOutOfModel off
+	  SupportModelReferenceSimTargetCustomCode off
+	}
+	Simulink.SFSimCC {
+	  $ObjectID		  8
+	  Version		  "1.11.1"
+	  SFSimEnableDebug	  on
+	  SFSimOverflowDetection  on
+	  SFSimEcho		  on
+	  SimBlas		  on
+	  SimCtrlC		  on
+	  SimExtrinsic		  on
+	  SimIntegrity		  on
+	  SimUseLocalCustomCode	  off
+	  SimParseCustomCode	  on
+	  SimBuildMode		  "sf_incremental_build"
+	}
+	Simulink.RTWCC {
+	  $BackupClass		  "Simulink.RTWCC"
+	  $ObjectID		  9
+	  Version		  "1.11.1"
+	  Array {
+	    Type		    "Cell"
+	    Dimension		    6
+	    Cell		    "IncludeHyperlinkInReport"
+	    Cell		    "GenerateTraceInfo"
+	    Cell		    "GenerateTraceReport"
+	    Cell		    "GenerateTraceReportSl"
+	    Cell		    "GenerateTraceReportSf"
+	    Cell		    "GenerateTraceReportEml"
+	    PropName		    "DisabledProps"
+	  }
+	  SystemTargetFile	  "grt.tlc"
+	  GenCodeOnly		  off
+	  MakeCommand		  "make_rtw"
+	  GenerateMakefile	  on
+	  TemplateMakefile	  "grt_default_tmf"
+	  GenerateReport	  off
+	  SaveLog		  off
+	  RTWVerbose		  on
+	  RetainRTWFile		  off
+	  ProfileTLC		  off
+	  TLCDebug		  off
+	  TLCCoverage		  off
+	  TLCAssert		  off
+	  ProcessScriptMode	  "Default"
+	  ConfigurationMode	  "Optimized"
+	  ConfigAtBuild		  off
+	  RTWUseLocalCustomCode	  off
+	  RTWUseSimCustomCode	  off
+	  IncludeHyperlinkInReport off
+	  LaunchReport		  off
+	  TargetLang		  "C"
+	  IncludeBusHierarchyInRTWFileBlockHierarchyMap	off
+	  IncludeERTFirstTime	  off
+	  GenerateTraceInfo	  off
+	  GenerateTraceReport	  off
+	  GenerateTraceReportSl	  off
+	  GenerateTraceReportSf	  off
+	  GenerateTraceReportEml  off
+	  GenerateCodeInfo	  off
+	  GenerateSLWebview	  off
+	  GenerateCodeMetricsReport off
+	  RTWCompilerOptimization "Off"
+	  CheckMdlBeforeBuild	  "Off"
+	  CustomRebuildMode	  "OnUpdate"
+	  Array {
+	    Type		    "Handle"
+	    Dimension		    2
+	    Simulink.CodeAppCC {
+	      $ObjectID		      10
+	      Version		      "1.11.1"
+	      Array {
+		Type			"Cell"
+		Dimension		17
+		Cell			"IgnoreCustomStorageClasses"
+		Cell			"IgnoreTestpoints"
+		Cell			"InsertBlockDesc"
+		Cell			"SFDataObjDesc"
+		Cell			"SimulinkDataObjDesc"
+		Cell			"DefineNamingRule"
+		Cell			"SignalNamingRule"
+		Cell			"ParamNamingRule"
+		Cell			"InlinedPrmAccess"
+		Cell			"CustomSymbolStr"
+		Cell			"CustomSymbolStrGlobalVar"
+		Cell			"CustomSymbolStrType"
+		Cell			"CustomSymbolStrField"
+		Cell			"CustomSymbolStrFcn"
+		Cell			"CustomSymbolStrBlkIO"
+		Cell			"CustomSymbolStrTmpVar"
+		Cell			"CustomSymbolStrMacro"
+		PropName		"DisabledProps"
+	      }
+	      ForceParamTrailComments off
+	      GenerateComments	      on
+	      IgnoreCustomStorageClasses on
+	      IgnoreTestpoints	      off
+	      IncHierarchyInIds	      off
+	      MaxIdLength	      31
+	      PreserveName	      off
+	      PreserveNameWithParent  off
+	      ShowEliminatedStatement off
+	      IncAutoGenComments      off
+	      SimulinkDataObjDesc     off
+	      SFDataObjDesc	      off
+	      MATLABFcnDesc	      off
+	      IncDataTypeInIds	      off
+	      MangleLength	      1
+	      CustomSymbolStrGlobalVar "$R$N$M"
+	      CustomSymbolStrType     "$N$R$M"
+	      CustomSymbolStrField    "$N$M"
+	      CustomSymbolStrFcn      "$R$N$M$F"
+	      CustomSymbolStrFcnArg   "rt$I$N$M"
+	      CustomSymbolStrBlkIO    "rtb_$N$M"
+	      CustomSymbolStrTmpVar   "$N$M"
+	      CustomSymbolStrMacro    "$R$N$M"
+	      DefineNamingRule	      "None"
+	      ParamNamingRule	      "None"
+	      SignalNamingRule	      "None"
+	      InsertBlockDesc	      off
+	      InsertPolySpaceComments off
+	      SimulinkBlockComments   on
+	      MATLABSourceComments    off
+	      EnableCustomComments    off
+	      InlinedPrmAccess	      "Literals"
+	      ReqsInCode	      off
+	      UseSimReservedNames     off
+	    }
+	    Simulink.GRTTargetCC {
+	      $BackupClass	      "Simulink.TargetCC"
+	      $ObjectID		      11
+	      Version		      "1.11.1"
+	      Array {
+		Type			"Cell"
+		Dimension		15
+		Cell			"IncludeMdlTerminateFcn"
+		Cell			"CombineOutputUpdateFcns"
+		Cell			"SuppressErrorStatus"
+		Cell			"ERTCustomFileBanners"
+		Cell			"GenerateSampleERTMain"
+		Cell			"GenerateTestInterfaces"
+		Cell			"ModelStepFunctionPrototypeControlCompliant"
+		Cell			"CPPClassGenCompliant"
+		Cell			"MultiInstanceERTCode"
+		Cell			"PurelyIntegerCode"
+		Cell			"PortableWordSizes"
+		Cell			"SupportComplex"
+		Cell			"SupportAbsoluteTime"
+		Cell			"SupportContinuousTime"
+		Cell			"SupportNonInlinedSFcns"
+		PropName		"DisabledProps"
+	      }
+	      TargetFcnLib	      "ansi_tfl_table_tmw.mat"
+	      TargetLibSuffix	      ""
+	      TargetPreCompLibLocation ""
+	      TargetFunctionLibrary   "ANSI_C"
+	      UtilityFuncGeneration   "Auto"
+	      ERTMultiwordTypeDef     "System defined"
+	      CodeExecutionProfiling  off
+	      ERTMultiwordLength      256
+	      MultiwordLength	      2048
+	      GenerateFullHeader      on
+	      GenerateSampleERTMain   off
+	      GenerateTestInterfaces  off
+	      IsPILTarget	      off
+	      ModelReferenceCompliant on
+	      ParMdlRefBuildCompliant on
+	      CompOptLevelCompliant   on
+	      ConcurrentExecutionCompliant on
+	      IncludeMdlTerminateFcn  on
+	      GeneratePreprocessorConditionals "Disable all"
+	      CombineOutputUpdateFcns off
+	      CombineSignalStateStructs	off
+	      SuppressErrorStatus     off
+	      ERTFirstTimeCompliant   off
+	      IncludeFileDelimiter    "Auto"
+	      ERTCustomFileBanners    off
+	      SupportAbsoluteTime     on
+	      LogVarNameModifier      "rt_"
+	      MatFileLogging	      on
+	      MultiInstanceERTCode    off
+	      SupportNonFinite	      on
+	      SupportComplex	      on
+	      PurelyIntegerCode	      off
+	      SupportContinuousTime   on
+	      SupportNonInlinedSFcns  on
+	      SupportVariableSizeSignals off
+	      EnableShiftOperators    on
+	      ParenthesesLevel	      "Nominal"
+	      PortableWordSizes	      off
+	      ModelStepFunctionPrototypeControlCompliant off
+	      CPPClassGenCompliant    off
+	      AutosarCompliant	      off
+	      UseMalloc		      off
+	      ExtMode		      off
+	      ExtModeStaticAlloc      off
+	      ExtModeTesting	      off
+	      ExtModeStaticAllocSize  1000000
+	      ExtModeTransport	      0
+	      ExtModeMexFile	      "ext_comm"
+	      ExtModeIntrfLevel	      "Level1"
+	      RTWCAPISignals	      off
+	      RTWCAPIParams	      off
+	      RTWCAPIStates	      off
+	      RTWCAPIRootIO	      off
+	      GenerateASAP2	      off
+	    }
+	    PropName		    "Components"
+	  }
+	}
+	SSC.SimscapeCC {
+	  $ObjectID		  12
+	  Version		  "1.0"
+	  Array {
+	    Type		    "Cell"
+	    Dimension		    1
+	    Cell		    "Name"
+	    PropName		    "DisabledProps"
+	  }
+	  Name			  "Simscape"
+	  EditingMode		  "Full"
+	  ExplicitSolverDiagnosticOptions "warning"
+	  InputDerivativeDiagnosticOptions "warning"
+	  GlobalZcOffDiagnosticOptions "warning"
+	  SimscapeLogType	  "none"
+	  SimscapeLogName	  "simlog"
+	  SimscapeLogDecimation	  1
+	  SimscapeLogLimitData	  on
+	  SimscapeLogDataHistory  5000
+	}
+	PropName		"Components"
+      }
+      Name		      "Configuration"
+      CurrentDlgPage	      "Solver"
+      ConfigPrmDlgPosition     [ 295, 120, 1208, 758 ] 
+    }
+    PropName		    "ConfigurationSets"
+  }
+  Simulink.ConfigSet {
+    $PropName		    "ActiveConfigurationSet"
+    $ObjectID		    1
+  }
+  BlockDefaults {
+    ForegroundColor	    "black"
+    BackgroundColor	    "white"
+    DropShadow		    off
+    NamePlacement	    "normal"
+    FontName		    "Helvetica"
+    FontSize		    10
+    FontWeight		    "normal"
+    FontAngle		    "normal"
+    ShowName		    on
+    BlockRotation	    0
+    BlockMirror		    off
+  }
+  AnnotationDefaults {
+    HorizontalAlignment	    "center"
+    VerticalAlignment	    "middle"
+    ForegroundColor	    "black"
+    BackgroundColor	    "white"
+    DropShadow		    off
+    FontName		    "Helvetica"
+    FontSize		    10
+    FontWeight		    "normal"
+    FontAngle		    "normal"
+    UseDisplayTextAsClickCallback off
+  }
+  LineDefaults {
+    FontName		    "Helvetica"
+    FontSize		    9
+    FontWeight		    "normal"
+    FontAngle		    "normal"
+  }
+  BlockParameterDefaults {
+    Block {
+      BlockType		      BusCreator
+      Inputs		      "4"
+      DisplayOption	      "none"
+      OutDataTypeStr	      "Inherit: auto"
+      NonVirtualBus	      off
+    }
+    Block {
+      BlockType		      BusSelector
+      OutputAsBus	      off
+    }
+    Block {
+      BlockType		      Constant
+      Value		      "1"
+      VectorParams1D	      on
+      SamplingMode	      "Sample based"
+      OutMin		      "[]"
+      OutMax		      "[]"
+      OutDataTypeStr	      "Inherit: Inherit from 'Constant value'"
+      LockScale		      off
+      SampleTime	      "inf"
+      FramePeriod	      "inf"
+      PreserveConstantTs      off
+    }
+    Block {
+      BlockType		      DataTypeConversion
+      OutMin		      "[]"
+      OutMax		      "[]"
+      OutDataTypeStr	      "Inherit: Inherit via back propagation"
+      LockScale		      off
+      ConvertRealWorld	      "Real World Value (RWV)"
+      RndMeth		      "Zero"
+      SaturateOnIntegerOverflow	on
+      SampleTime	      "-1"
+    }
+    Block {
+      BlockType		      Demux
+      Outputs		      "4"
+      DisplayOption	      "none"
+      BusSelectionMode	      off
+    }
+    Block {
+      BlockType		      Display
+      Format		      "short"
+      Decimation	      "10"
+      Floating		      off
+      SampleTime	      "-1"
+    }
+    Block {
+      BlockType		      From
+      IconDisplay	      "Tag"
+      TagVisibility	      "local"
+    }
+    Block {
+      BlockType		      Gain
+      Gain		      "1"
+      Multiplication	      "Element-wise(K.*u)"
+      ParamMin		      "[]"
+      ParamMax		      "[]"
+      ParamDataTypeStr	      "Inherit: Same as input"
+      OutMin		      "[]"
+      OutMax		      "[]"
+      OutDataTypeStr	      "Inherit: Same as input"
+      LockScale		      off
+      RndMeth		      "Floor"
+      SaturateOnIntegerOverflow	on
+      SampleTime	      "-1"
+    }
+    Block {
+      BlockType		      Goto
+      IconDisplay	      "Tag"
+    }
+    Block {
+      BlockType		      Inport
+      Port		      "1"
+      OutputFunctionCall      off
+      OutMin		      "[]"
+      OutMax		      "[]"
+      OutDataTypeStr	      "Inherit: auto"
+      LockScale		      off
+      BusOutputAsStruct	      off
+      PortDimensions	      "-1"
+      VarSizeSig	      "Inherit"
+      SampleTime	      "-1"
+      SignalType	      "auto"
+      SamplingMode	      "auto"
+      LatchByDelayingOutsideSignal off
+      LatchInputForFeedbackSignals off
+      Interpolate	      on
+    }
+    Block {
+      BlockType		      Logic
+      Operator		      "AND"
+      Inputs		      "2"
+      IconShape		      "rectangular"
+      AllPortsSameDT	      on
+      OutDataTypeStr	      "Inherit: Logical (see Configuration Parameters: Optimization)"
+      SampleTime	      "-1"
+    }
+    Block {
+      BlockType		      Mux
+      Inputs		      "4"
+      DisplayOption	      "none"
+      UseBusObject	      off
+      BusObject		      "BusObject"
+      NonVirtualBus	      off
+    }
+    Block {
+      BlockType		      Outport
+      Port		      "1"
+      OutMin		      "[]"
+      OutMax		      "[]"
+      OutDataTypeStr	      "Inherit: auto"
+      LockScale		      off
+      BusOutputAsStruct	      off
+      PortDimensions	      "-1"
+      VarSizeSig	      "Inherit"
+      SampleTime	      "-1"
+      SignalType	      "auto"
+      SamplingMode	      "auto"
+      SourceOfInitialOutputValue "Dialog"
+      OutputWhenDisabled      "held"
+      InitialOutput	      "[]"
+    }
+    Block {
+      BlockType		      PMIOPort
+    }
+    Block {
+      BlockType		      Product
+      Inputs		      "2"
+      Multiplication	      "Element-wise(.*)"
+      CollapseMode	      "All dimensions"
+      CollapseDim	      "1"
+      InputSameDT	      on
+      OutMin		      "[]"
+      OutMax		      "[]"
+      OutDataTypeStr	      "Inherit: Same as first input"
+      LockScale		      off
+      RndMeth		      "Zero"
+      SaturateOnIntegerOverflow	on
+      SampleTime	      "-1"
+    }
+    Block {
+      BlockType		      RelationalOperator
+      Operator		      ">="
+      InputSameDT	      on
+      OutDataTypeStr	      "Inherit: Logical (see Configuration Parameters: Optimization)"
+      ZeroCross		      on
+      SampleTime	      "-1"
+    }
+    Block {
+      BlockType		      S-Function
+      FunctionName	      "system"
+      SFunctionModules	      "''"
+      PortCounts	      "[]"
+      SFunctionDeploymentMode off
+    }
+    Block {
+      BlockType		      Scope
+      ModelBased	      off
+      TickLabels	      "OneTimeTick"
+      ZoomMode		      "on"
+      Grid		      "on"
+      TimeRange		      "auto"
+      YMin		      "-5"
+      YMax		      "5"
+      SaveToWorkspace	      off
+      SaveName		      "ScopeData"
+      LimitDataPoints	      on
+      MaxDataPoints	      "5000"
+      Decimation	      "1"
+      SampleInput	      off
+      SampleTime	      "-1"
+    }
+    Block {
+      BlockType		      SubSystem
+      ShowPortLabels	      "FromPortIcon"
+      Permissions	      "ReadWrite"
+      PermitHierarchicalResolution "All"
+      TreatAsAtomicUnit	      off
+      CheckFcnCallInpInsideContextMsg off
+      SystemSampleTime	      "-1"
+      RTWFcnNameOpts	      "Auto"
+      RTWFileNameOpts	      "Auto"
+      RTWMemSecFuncInitTerm   "Inherit from model"
+      RTWMemSecFuncExecute    "Inherit from model"
+      RTWMemSecDataConstants  "Inherit from model"
+      RTWMemSecDataInternal   "Inherit from model"
+      RTWMemSecDataParameters "Inherit from model"
+      SimViewingDevice	      off
+      DataTypeOverride	      "UseLocalSettings"
+      DataTypeOverrideAppliesTo	"AllNumericTypes"
+      MinMaxOverflowLogging   "UseLocalSettings"
+      SFBlockType	      "NONE"
+      Variant		      off
+      GeneratePreprocessorConditionals off
+    }
+    Block {
+      BlockType		      Sum
+      IconShape		      "rectangular"
+      Inputs		      "++"
+      CollapseMode	      "All dimensions"
+      CollapseDim	      "1"
+      InputSameDT	      on
+      AccumDataTypeStr	      "Inherit: Inherit via internal rule"
+      OutMin		      "[]"
+      OutMax		      "[]"
+      OutDataTypeStr	      "Inherit: Same as first input"
+      LockScale		      off
+      RndMeth		      "Floor"
+      SaturateOnIntegerOverflow	on
+      SampleTime	      "-1"
+    }
+    Block {
+      BlockType		      Switch
+      Criteria		      "u2 >= Threshold"
+      Threshold		      "0"
+      InputSameDT	      on
+      OutMin		      "[]"
+      OutMax		      "[]"
+      OutDataTypeStr	      "Inherit: Inherit via internal rule"
+      LockScale		      off
+      RndMeth		      "Floor"
+      SaturateOnIntegerOverflow	on
+      ZeroCross		      on
+      SampleTime	      "-1"
+      AllowDiffInputSizes     off
+    }
+    Block {
+      BlockType		      TransportDelay
+      DelayTime		      "1"
+      InitialOutput	      "0"
+      BufferSize	      "1024"
+      FixedBuffer	      off
+      TransDelayFeedthrough   off
+      PadeOrder		      "0"
+    }
+    Block {
+      BlockType		      UnitDelay
+      X0		      "0"
+      InputProcessing	      "Inherited"
+      SampleTime	      "1"
+      StateMustResolveToSignalObject off
+      RTWStateStorageClass    "Auto"
+      HasFrameUpgradeWarning  on
+    }
+  }
+  System {
+    Name		    "VSI_LC_PC"
+    Location		    [-46, 126, 1278, 924]
+    Open		    on
+    ModelBrowserVisibility  off
+    ModelBrowserWidth	    200
+    ScreenColor		    "white"
+    PaperOrientation	    "landscape"
+    PaperPositionMode	    "auto"
+    PaperType		    "usletter"
+    PaperUnits		    "inches"
+    TiledPaperMargins	    [0.500000, 0.500000, 0.500000, 0.500000]
+    TiledPageScale	    1
+    ShowPageBoundaries	    off
+    ZoomFactor		    "106"
+    ReportName		    "simulink-default.rpt"
+    SIDHighWatermark	    "7389"
+    Block {
+      BlockType		      SubSystem
+      Name		      "Centered_PWM_Generator"
+      SID		      "6650"
+      Ports		      [3, 1]
+      Position		      [475, 290, 565, 400]
+      ShowName		      off
+      FontName		      "Arial"
+      FontSize		      12
+      MinAlgLoopOccurrences   off
+      PropExecContextOutsideSubsystem off
+      RTWSystemCode	      "Auto"
+      FunctionWithSeparateData off
+      Opaque		      off
+      RequestExecContextInheritance off
+      MaskHideContents	      off
+      System {
+	Name			"Centered_PWM_Generator"
+	Location		[62, 205, 1361, 723]
+	Open			off
+	ModelBrowserVisibility	off
+	ModelBrowserWidth	200
+	ScreenColor		"white"
+	PaperOrientation	"landscape"
+	PaperPositionMode	"auto"
+	PaperType		"usletter"
+	PaperUnits		"inches"
+	TiledPaperMargins	[0.500000, 0.500000, 0.500000, 0.500000]
+	TiledPageScale		1
+	ShowPageBoundaries	off
+	ZoomFactor		"100"
+	Block {
+	  BlockType		  Inport
+	  Name			  "Da"
+	  SID			  "6651"
+	  Position		  [50, 163, 80, 177]
+	  FontName		  "Arial"
+	  FontSize		  12
+	  IconDisplay		  "Port number"
+	}
+	Block {
+	  BlockType		  Inport
+	  Name			  "Db"
+	  SID			  "6652"
+	  Position		  [50, 193, 80, 207]
+	  FontName		  "Arial"
+	  FontSize		  12
+	  Port			  "2"
+	  IconDisplay		  "Port number"
+	}
+	Block {
+	  BlockType		  Inport
+	  Name			  "Dc"
+	  SID			  "6653"
+	  Position		  [50, 223, 80, 237]
+	  FontName		  "Arial"
+	  FontSize		  12
+	  Port			  "3"
+	  IconDisplay		  "Port number"
+	}
+	Block {
+	  BlockType		  DataTypeConversion
+	  Name			  "Data Type Conversion"
+	  SID			  "6654"
+	  Position		  [755, 98, 830, 132]
+	  ShowName		  off
+	  FontName		  "Arial"
+	  FontSize		  12
+	  OutDataTypeStr	  "double"
+	  RndMeth		  "Floor"
+	  SaturateOnIntegerOverflow off
+	}
+	Block {
+	  BlockType		  DataTypeConversion
+	  Name			  "Data Type Conversion1"
+	  SID			  "6655"
+	  Position		  [755, 373, 830, 407]
+	  ShowName		  off
+	  FontName		  "Arial"
+	  FontSize		  12
+	  OutDataTypeStr	  "double"
+	  RndMeth		  "Floor"
+	  SaturateOnIntegerOverflow off
+	}
+	Block {
+	  BlockType		  SubSystem
+	  Name			  "DeadTime3"
+	  SID			  "6656"
+	  Ports			  [1, 1]
+	  Position		  [1110, 240, 1160, 280]
+	  MinAlgLoopOccurrences	  off
+	  PropExecContextOutsideSubsystem off
+	  RTWSystemCode		  "Auto"
+	  FunctionWithSeparateData off
+	  Opaque		  off
+	  RequestExecContextInheritance	off
+	  MaskHideContents	  off
+	  System {
+	    Name		    "DeadTime3"
+	    Location		    [111, 208, 516, 379]
+	    Open		    off
+	    ModelBrowserVisibility  off
+	    ModelBrowserWidth	    200
+	    ScreenColor		    "white"
+	    PaperOrientation	    "landscape"
+	    PaperPositionMode	    "auto"
+	    PaperType		    "usletter"
+	    PaperUnits		    "inches"
+	    TiledPaperMargins	    [0.500000, 0.500000, 0.500000, 0.500000]
+	    TiledPageScale	    1
+	    ShowPageBoundaries	    off
+	    ZoomFactor		    "100"
+	    Block {
+	      BlockType		      Inport
+	      Name		      "In1"
+	      SID		      "6657"
+	      Position		      [25, 48, 55, 62]
+	      IconDisplay	      "Port number"
+	    }
+	    Block {
+	      BlockType		      Reference
+	      Name		      "Compare\nTo Zero"
+	      SID		      "6658"
+	      Ports		      [1, 1]
+	      Position		      [105, 40, 135, 70]
+	      LibraryVersion	      "1.256"
+	      SourceBlock	      "simulink/Logic and Bit\nOperations/Compare\nTo Zero"
+	      SourceType	      "Compare To Zero"
+	      relop		      "<="
+	      OutDataTypeStr	      "uint8"
+	      ZeroCross		      on
+	    }
+	    Block {
+	      BlockType		      Switch
+	      Name		      "Switch"
+	      SID		      "6659"
+	      Position		      [240, 40, 270, 70]
+	      Criteria		      "u2 ~= 0"
+	      InputSameDT	      off
+	      SaturateOnIntegerOverflow	off
+	    }
+	    Block {
+	      BlockType		      TransportDelay
+	      Name		      "Transport\nDelay"
+	      SID		      "6660"
+	      Ports		      [1, 1]
+	      Position		      [120, 100, 150, 130]
+	      DelayTime		      "DeadTime"
+	      BufferSize	      "2048*16"
+	      FixedBuffer	      on
+	    }
+	    Block {
+	      BlockType		      Outport
+	      Name		      "Out1"
+	      SID		      "6661"
+	      Position		      [320, 48, 350, 62]
+	      IconDisplay	      "Port number"
+	    }
+	    Line {
+	      SrcBlock		      "Switch"
+	      SrcPort		      1
+	      DstBlock		      "Out1"
+	      DstPort		      1
+	    }
+	    Line {
+	      SrcBlock		      "Compare\nTo Zero"
+	      SrcPort		      1
+	      DstBlock		      "Switch"
+	      DstPort		      2
+	    }
+	    Line {
+	      SrcBlock		      "Transport\nDelay"
+	      SrcPort		      1
+	      Points		      [60, 0; 0, -50]
+	      DstBlock		      "Switch"
+	      DstPort		      3
+	    }
+	    Line {
+	      SrcBlock		      "In1"
+	      SrcPort		      1
+	      Points		      [15, 0]
+	      Branch {
+		Points			[0, 60]
+		DstBlock		"Transport\nDelay"
+		DstPort			1
+	      }
+	      Branch {
+		DstBlock		"Compare\nTo Zero"
+		DstPort			1
+	      }
+	      Branch {
+		Points			[0, -25; 140, 0; 0, 15]
+		DstBlock		"Switch"
+		DstPort			1
+	      }
+	    }
+	  }
+	}
+	Block {
+	  BlockType		  Demux
+	  Name			  "Demux"
+	  SID			  "6662"
+	  Ports			  [1, 3]
+	  Position		  [940, 129, 945, 351]
+	  ShowName		  off
+	  Outputs		  "3"
+	  DisplayOption		  "bar"
+	}
+	Block {
+	  BlockType		  Gain
+	  Name			  "Gain"
+	  SID			  "6663"
+	  Position		  [215, 99, 335, 151]
+	  FontName		  "Arial"
+	  FontSize		  12
+	  Gain			  "PWM_Cycle/2"
+	  ParamDataTypeStr	  "Inherit: Inherit via internal rule"
+	  OutDataTypeStr	  "Inherit: Inherit via internal rule"
+	  SaturateOnIntegerOverflow off
+	}
+	Block {
+	  BlockType		  Gain
+	  Name			  "Gain2"
+	  SID			  "6664"
+	  Position		  [210, 370, 330, 420]
+	  FontName		  "Arial"
+	  FontSize		  12
+	  Gain			  "-PWM_Cycle/2"
+	  ParamDataTypeStr	  "Inherit: Inherit via internal rule"
+	  OutDataTypeStr	  "Inherit: Inherit via internal rule"
+	  SaturateOnIntegerOverflow off
+	}
+	Block {
+	  BlockType		  Logic
+	  Name			  "Logical\nOperator"
+	  SID			  "6665"
+	  Ports			  [2, 1]
+	  Position		  [700, 25, 735, 205]
+	  ShowName		  off
+	  FontName		  "Arial"
+	  FontSize		  12
+	  AllPortsSameDT	  off
+	  OutDataTypeStr	  "boolean"
+	}
+	Block {
+	  BlockType		  Logic
+	  Name			  "Logical\nOperator1"
+	  SID			  "6666"
+	  Ports			  [2, 1]
+	  Position		  [700, 300, 735, 480]
+	  ShowName		  off
+	  FontName		  "Arial"
+	  FontSize		  12
+	  Operator		  "OR"
+	  AllPortsSameDT	  off
+	  OutDataTypeStr	  "boolean"
+	}
+	Block {
+	  BlockType		  Logic
+	  Name			  "Logical\nOperator2"
+	  SID			  "6667"
+	  Ports			  [1, 1]
+	  Position		  [985, 184, 1010, 216]
+	  ShowName		  off
+	  Operator		  "NOT"
+	  OutDataTypeStr	  "float('double')"
+	}
+	Block {
+	  BlockType		  Logic
+	  Name			  "Logical\nOperator3"
+	  SID			  "6668"
+	  Ports			  [1, 1]
+	  Position		  [985, 264, 1010, 296]
+	  ShowName		  off
+	  Operator		  "NOT"
+	  OutDataTypeStr	  "float('double')"
+	}
+	Block {
+	  BlockType		  Logic
+	  Name			  "Logical\nOperator4"
+	  SID			  "6669"
+	  Ports			  [1, 1]
+	  Position		  [985, 344, 1010, 376]
+	  ShowName		  off
+	  Operator		  "NOT"
+	  OutDataTypeStr	  "float('double')"
+	}
+	Block {
+	  BlockType		  Mux
+	  Name			  "Mux1"
+	  SID			  "6670"
+	  Ports			  [3, 1]
+	  Position		  [115, 156, 120, 244]
+	  ShowName		  off
+	  Inputs		  "3"
+	  DisplayOption		  "bar"
+	}
+	Block {
+	  BlockType		  Mux
+	  Name			  "Mux2"
+	  SID			  "6671"
+	  Ports			  [6, 1]
+	  Position		  [1070, 144, 1075, 376]
+	  ShowName		  off
+	  Inputs		  "6"
+	  DisplayOption		  "bar"
+	}
+	Block {
+	  BlockType		  Mux
+	  Name			  "Mux3"
+	  SID			  "7166"
+	  Ports			  [3, 1]
+	  Position		  [645, 245, 650, 305]
+	  ShowName		  off
+	  Inputs		  "3"
+	  DisplayOption		  "bar"
+	}
+	Block {
+	  BlockType		  Constant
+	  Name			  "PWM_Value1"
+	  SID			  "6672"
+	  Position		  [50, 110, 80, 140]
+	  ShowName		  off
+	  FontName		  "Arial"
+	  FontSize		  12
+	}
+	Block {
+	  BlockType		  Constant
+	  Name			  "PWM_Value2"
+	  SID			  "6673"
+	  Position		  [410, 62, 510, 88]
+	  ShowName		  off
+	  FontName		  "Arial"
+	  FontSize		  12
+	  Value			  "PWM_Cycle/2"
+	}
+	Block {
+	  BlockType		  Constant
+	  Name			  "PWM_Value3"
+	  SID			  "6674"
+	  Position		  [410, 132, 510, 158]
+	  ShowName		  off
+	  FontName		  "Arial"
+	  FontSize		  12
+	  Value			  "PWM_Cycle/2"
+	}
+	Block {
+	  BlockType		  Constant
+	  Name			  "PWM_Value4"
+	  SID			  "6675"
+	  Position		  [415, 337, 515, 363]
+	  ShowName		  off
+	  FontName		  "Arial"
+	  FontSize		  12
+	  Value			  "PWM_Cycle/2"
+	}
+	Block {
+	  BlockType		  Constant
+	  Name			  "PWM_Value5"
+	  SID			  "6676"
+	  Position		  [410, 427, 510, 453]
+	  ShowName		  off
+	  FontName		  "Arial"
+	  FontSize		  12
+	  Value			  "PWM_Cycle/2"
+	}
+	Block {
+	  BlockType		  RelationalOperator
+	  Name			  "Relational\nOperator"
+	  SID			  "6677"
+	  Ports			  [2, 1]
+	  Position		  [635, 142, 665, 173]
+	  ShowName		  off
+	  FontName		  "Arial"
+	  FontSize		  12
+	  InputSameDT		  off
+	  OutDataTypeStr	  "boolean"
+	}
+	Block {
+	  BlockType		  RelationalOperator
+	  Name			  "Relational\nOperator1"
+	  SID			  "6678"
+	  Ports			  [2, 1]
+	  Position		  [635, 52, 665, 83]
+	  ShowName		  off
+	  FontName		  "Arial"
+	  FontSize		  12
+	  Operator		  "<="
+	  InputSameDT		  off
+	  OutDataTypeStr	  "boolean"
+	}
+	Block {
+	  BlockType		  RelationalOperator
+	  Name			  "Relational\nOperator2"
+	  SID			  "6679"
+	  Ports			  [2, 1]
+	  Position		  [635, 417, 665, 448]
+	  ShowName		  off
+	  FontName		  "Arial"
+	  FontSize		  12
+	  Operator		  "<="
+	  InputSameDT		  off
+	  OutDataTypeStr	  "boolean"
+	}
+	Block {
+	  BlockType		  RelationalOperator
+	  Name			  "Relational\nOperator3"
+	  SID			  "6680"
+	  Ports			  [2, 1]
+	  Position		  [635, 327, 665, 358]
+	  ShowName		  off
+	  FontName		  "Arial"
+	  FontSize		  12
+	  InputSameDT		  off
+	  OutDataTypeStr	  "boolean"
+	}
+	Block {
+	  BlockType		  Reference
+	  Name			  "Repeating\nSequence"
+	  SID			  "6681"
+	  Ports			  [0, 1]
+	  Position		  [100, 260, 130, 290]
+	  ShowName		  off
+	  LibraryVersion	  "1.256"
+	  FontName		  "Arial"
+	  FontSize		  12
+	  SourceBlock		  "simulink/Sources/Repeating\nSequence"
+	  SourceType		  "Repeating table"
+	  rep_seq_t		  "[0  (0.5*PWM_Cycle*12.5e-9) (1*PWM_Cycle*12.5e-9)]"
+	  rep_seq_y		  "[0 PWM_Cycle 0]"
+	}
+	Block {
+	  BlockType		  Sum
+	  Name			  "Sum"
+	  SID			  "6682"
+	  Ports			  [2, 1]
+	  Position		  [145, 115, 165, 135]
+	  ShowName		  off
+	  FontName		  "Arial"
+	  FontSize		  12
+	  IconShape		  "round"
+	  Inputs		  "|+-"
+	  InputSameDT		  off
+	  OutDataTypeStr	  "Inherit: Inherit via internal rule"
+	  SaturateOnIntegerOverflow off
+	}
+	Block {
+	  BlockType		  Sum
+	  Name			  "Sum1"
+	  SID			  "6683"
+	  Ports			  [2, 1]
+	  Position		  [545, 65, 565, 85]
+	  ShowName		  off
+	  FontName		  "Arial"
+	  FontSize		  12
+	  IconShape		  "round"
+	  Inputs		  "|++"
+	  InputSameDT		  off
+	  OutDataTypeStr	  "Inherit: Inherit via internal rule"
+	  SaturateOnIntegerOverflow off
+	}
+	Block {
+	  BlockType		  Sum
+	  Name			  "Sum2"
+	  SID			  "6684"
+	  Ports			  [2, 1]
+	  Position		  [545, 155, 565, 175]
+	  ShowName		  off
+	  FontName		  "Arial"
+	  FontSize		  12
+	  IconShape		  "round"
+	  Inputs		  "|+-"
+	  InputSameDT		  off
+	  OutDataTypeStr	  "Inherit: Inherit via internal rule"
+	  SaturateOnIntegerOverflow off
+	}
+	Block {
+	  BlockType		  Sum
+	  Name			  "Sum3"
+	  SID			  "6685"
+	  Ports			  [2, 1]
+	  Position		  [545, 340, 565, 360]
+	  ShowName		  off
+	  FontName		  "Arial"
+	  FontSize		  12
+	  IconShape		  "round"
+	  Inputs		  "|++"
+	  InputSameDT		  off
+	  OutDataTypeStr	  "Inherit: Inherit via internal rule"
+	  SaturateOnIntegerOverflow off
+	}
+	Block {
+	  BlockType		  Sum
+	  Name			  "Sum4"
+	  SID			  "6686"
+	  Ports			  [2, 1]
+	  Position		  [545, 430, 565, 450]
+	  ShowName		  off
+	  FontName		  "Arial"
+	  FontSize		  12
+	  IconShape		  "round"
+	  Inputs		  "|+-"
+	  InputSameDT		  off
+	  OutDataTypeStr	  "Inherit: Inherit via internal rule"
+	  SaturateOnIntegerOverflow off
+	}
+	Block {
+	  BlockType		  Switch
+	  Name			  "Switch"
+	  SID			  "6687"
+	  Position		  [870, 209, 900, 271]
+	  FontName		  "Arial"
+	  FontSize		  12
+	  InputSameDT		  off
+	  SaturateOnIntegerOverflow off
+	}
+	Block {
+	  BlockType		  Scope
+	  Name			  "iabc1"
+	  SID			  "6688"
+	  Ports			  [3]
+	  Position		  [1070, 25, 1105, 115]
+	  NamePlacement		  "alternate"
+	  Floating		  off
+	  Location		  [221, 92, 1134, 575]
+	  Open			  off
+	  NumInputPorts		  "3"
+	  ZoomMode		  "xonly"
+	  List {
+	    ListType		    AxesTitles
+	    axes1		    "%<SignalLabel>"
+	    axes2		    "%<SignalLabel>"
+	    axes3		    "%<SignalLabel>"
+	  }
+	  TimeRange		  "0.02"
+	  YMin			  "-9~-5~-5"
+	  YMax			  "8~5~5"
+	  SaveName		  "iabc_L2"
+	  DataFormat		  "StructureWithTime"
+	  LimitDataPoints	  off
+	  SampleTime		  "0"
+	}
+	Block {
+	  BlockType		  Scope
+	  Name			  "vabc1"
+	  SID			  "7165"
+	  Ports			  [1]
+	  Position		  [685, 259, 715, 291]
+	  NamePlacement		  "alternate"
+	  Floating		  off
+	  Location		  [666, 505, 1424, 847]
+	  Open			  off
+	  NumInputPorts		  "1"
+	  ZoomMode		  "xonly"
+	  List {
+	    ListType		    AxesTitles
+	    axes1		    "%<SignalLabel>"
+	  }
+	  TimeRange		  "0.01"
+	  YMin			  "0"
+	  YMax			  "4000"
+	  SaveName		  "vabcll2"
+	  DataFormat		  "StructureWithTime"
+	  LimitDataPoints	  off
+	  SampleTime		  "0"
+	}
+	Block {
+	  BlockType		  Scope
+	  Name			  "vabc3"
+	  SID			  "6689"
+	  Ports			  [1]
+	  Position		  [260, 199, 290, 231]
+	  NamePlacement		  "alternate"
+	  Floating		  off
+	  Location		  [332, 300, 1245, 719]
+	  Open			  off
+	  NumInputPorts		  "1"
+	  ZoomMode		  "xonly"
+	  List {
+	    ListType		    AxesTitles
+	    axes1		    "%<SignalLabel>"
+	  }
+	  TimeRange		  "0.01"
+	  YMin			  "-11"
+	  YMax			  "12"
+	  SaveName		  "vabcll1"
+	  DataFormat		  "StructureWithTime"
+	  LimitDataPoints	  off
+	  SampleTime		  "0"
+	}
+	Block {
+	  BlockType		  Outport
+	  Name			  "PWM_Pulses"
+	  SID			  "6690"
+	  Position		  [1225, 253, 1255, 267]
+	  FontName		  "Arial"
+	  FontSize		  12
+	  IconDisplay		  "Port number"
+	}
+	Line {
+	  SrcBlock		  "Logical\nOperator4"
+	  SrcPort		  1
+	  DstBlock		  "Mux2"
+	  DstPort		  6
+	}
+	Line {
+	  SrcBlock		  "Demux"
+	  SrcPort		  3
+	  Points		  [10, 0]
+	  Branch {
+	    Points		    [0, 45]
+	    DstBlock		    "Logical\nOperator4"
+	    DstPort		    1
+	  }
+	  Branch {
+	    Points		    [50, 0; 0, 5; 30, 0]
+	    Branch {
+	      DstBlock		      "Mux2"
+	      DstPort		      5
+	    }
+	    Branch {
+	      Points		      [0, -220]
+	      DstBlock		      "iabc1"
+	      DstPort		      3
+	    }
+	  }
+	}
+	Line {
+	  SrcBlock		  "Logical\nOperator3"
+	  SrcPort		  1
+	  DstBlock		  "Mux2"
+	  DstPort		  4
+	}
+	Line {
+	  SrcBlock		  "Demux"
+	  SrcPort		  2
+	  Points		  [10, 0]
+	  Branch {
+	    Points		    [0, 40]
+	    DstBlock		    "Logical\nOperator3"
+	    DstPort		    1
+	  }
+	  Branch {
+	    Points		    [65, 0]
+	    Branch {
+	      DstBlock		      "Mux2"
+	      DstPort		      3
+	    }
+	    Branch {
+	      Points		      [0, -170]
+	      DstBlock		      "iabc1"
+	      DstPort		      2
+	    }
+	  }
+	}
+	Line {
+	  SrcBlock		  "Logical\nOperator2"
+	  SrcPort		  1
+	  DstBlock		  "Mux2"
+	  DstPort		  2
+	}
+	Line {
+	  SrcBlock		  "Demux"
+	  SrcPort		  1
+	  Points		  [0, 5; 5, 0]
+	  Branch {
+	    Points		    [0, 30]
+	    DstBlock		    "Logical\nOperator2"
+	    DstPort		    1
+	  }
+	  Branch {
+	    Points		    [0, -10; 55, 0]
+	    Branch {
+	      DstBlock		      "Mux2"
+	      DstPort		      1
+	    }
+	    Branch {
+	      Points		      [0, -120]
+	      DstBlock		      "iabc1"
+	      DstPort		      1
+	    }
+	  }
+	}
+	Line {
+	  SrcBlock		  "Mux2"
+	  SrcPort		  1
+	  DstBlock		  "DeadTime3"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "Dc"
+	  SrcPort		  1
+	  DstBlock		  "Mux1"
+	  DstPort		  3
+	}
+	Line {
+	  SrcBlock		  "Db"
+	  SrcPort		  1
+	  DstBlock		  "Mux1"
+	  DstPort		  2
+	}
+	Line {
+	  SrcBlock		  "Da"
+	  SrcPort		  1
+	  DstBlock		  "Mux1"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "Mux1"
+	  SrcPort		  1
+	  Points		  [30, 0]
+	  Branch {
+	    DstBlock		    "Sum"
+	    DstPort		    2
+	  }
+	  Branch {
+	    Points		    [25, 0; 0, 10]
+	    Branch {
+	      Points		      [0, 35]
+	      Branch {
+		Points			[675, 0]
+		DstBlock		"Switch"
+		DstPort			2
+	      }
+	      Branch {
+		Points			[0, 150]
+		DstBlock		"Gain2"
+		DstPort			1
+	      }
+	    }
+	    Branch {
+	      Points		      [0, 5]
+	      DstBlock		      "vabc3"
+	      DstPort		      1
+	    }
+	  }
+	}
+	Line {
+	  SrcBlock		  "Switch"
+	  SrcPort		  1
+	  DstBlock		  "Demux"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "Data Type Conversion1"
+	  SrcPort		  1
+	  Points		  [5, 0; 0, -130]
+	  DstBlock		  "Switch"
+	  DstPort		  3
+	}
+	Line {
+	  SrcBlock		  "Gain2"
+	  SrcPort		  1
+	  Points		  [20, 0]
+	  Branch {
+	    Points		    [200, 0]
+	    DstBlock		    "Sum3"
+	    DstPort		    2
+	  }
+	  Branch {
+	    Points		    [0, 95; 200, 0]
+	    DstBlock		    "Sum4"
+	    DstPort		    2
+	  }
+	}
+	Line {
+	  SrcBlock		  "Logical\nOperator1"
+	  SrcPort		  1
+	  DstBlock		  "Data Type Conversion1"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "Relational\nOperator2"
+	  SrcPort		  1
+	  DstBlock		  "Logical\nOperator1"
+	  DstPort		  2
+	}
+	Line {
+	  SrcBlock		  "Relational\nOperator3"
+	  SrcPort		  1
+	  DstBlock		  "Logical\nOperator1"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "Sum3"
+	  SrcPort		  1
+	  DstBlock		  "Relational\nOperator3"
+	  DstPort		  2
+	}
+	Line {
+	  SrcBlock		  "Sum4"
+	  SrcPort		  1
+	  DstBlock		  "Relational\nOperator2"
+	  DstPort		  2
+	}
+	Line {
+	  SrcBlock		  "PWM_Value5"
+	  SrcPort		  1
+	  DstBlock		  "Sum4"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "PWM_Value4"
+	  SrcPort		  1
+	  DstBlock		  "Sum3"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "Data Type Conversion"
+	  SrcPort		  1
+	  Points		  [5, 0; 0, 105]
+	  DstBlock		  "Switch"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "Logical\nOperator"
+	  SrcPort		  1
+	  DstBlock		  "Data Type Conversion"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "Relational\nOperator"
+	  SrcPort		  1
+	  DstBlock		  "Logical\nOperator"
+	  DstPort		  2
+	}
+	Line {
+	  SrcBlock		  "Relational\nOperator1"
+	  SrcPort		  1
+	  DstBlock		  "Logical\nOperator"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "Sum1"
+	  SrcPort		  1
+	  Points		  [5, 0]
+	  Branch {
+	    DstBlock		    "Relational\nOperator1"
+	    DstPort		    2
+	  }
+	  Branch {
+	    Points		    [0, 180]
+	    DstBlock		    "Mux3"
+	    DstPort		    1
+	  }
+	}
+	Line {
+	  SrcBlock		  "Sum2"
+	  SrcPort		  1
+	  Points		  [35, 0]
+	  Branch {
+	    DstBlock		    "Relational\nOperator"
+	    DstPort		    2
+	  }
+	  Branch {
+	    Points		    [0, 130]
+	    DstBlock		    "Mux3"
+	    DstPort		    3
+	  }
+	}
+	Line {
+	  SrcBlock		  "PWM_Value3"
+	  SrcPort		  1
+	  Points		  [15, 0]
+	  DstBlock		  "Sum2"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "Gain"
+	  SrcPort		  1
+	  Points		  [30, 0]
+	  Branch {
+	    Points		    [0, 65]
+	    DstBlock		    "Sum2"
+	    DstPort		    2
+	  }
+	  Branch {
+	    Points		    [185, 0]
+	    DstBlock		    "Sum1"
+	    DstPort		    2
+	  }
+	}
+	Line {
+	  SrcBlock		  "Sum"
+	  SrcPort		  1
+	  DstBlock		  "Gain"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "PWM_Value1"
+	  SrcPort		  1
+	  DstBlock		  "Sum"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "Repeating\nSequence"
+	  SrcPort		  1
+	  Points		  [455, 0]
+	  Branch {
+	    Points		    [0, -125]
+	    Branch {
+	      Points		      [0, -90]
+	      DstBlock		      "Relational\nOperator1"
+	      DstPort		      1
+	    }
+	    Branch {
+	      DstBlock		      "Relational\nOperator"
+	      DstPort		      1
+	    }
+	  }
+	  Branch {
+	    Points		    [0, 60]
+	    Branch {
+	      DstBlock		      "Relational\nOperator3"
+	      DstPort		      1
+	    }
+	    Branch {
+	      Points		      [0, 90]
+	      DstBlock		      "Relational\nOperator2"
+	      DstPort		      1
+	    }
+	  }
+	  Branch {
+	    DstBlock		    "Mux3"
+	    DstPort		    2
+	  }
+	}
+	Line {
+	  SrcBlock		  "DeadTime3"
+	  SrcPort		  1
+	  DstBlock		  "PWM_Pulses"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "PWM_Value2"
+	  SrcPort		  1
+	  DstBlock		  "Sum1"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "Mux3"
+	  SrcPort		  1
+	  DstBlock		  "vabc1"
+	  DstPort		  1
+	}
+      }
+    }
+    Block {
+      BlockType		      Constant
+      Name		      "Constant"
+      SID		      "7365"
+      Position		      [15, 542, 85, 558]
+      ZOrder		      -5
+      ShowName		      off
+      Value		      "Kpi_VSI"
+    }
+    Block {
+      BlockType		      Constant
+      Name		      "Constant1"
+      SID		      "7366"
+      Position		      [15, 557, 85, 573]
+      ZOrder		      -5
+      ShowName		      off
+      Value		      "Kii_VSI"
+    }
+    Block {
+      BlockType		      Constant
+      Name		      "Constant10"
+      SID		      "7375"
+      Position		      [15, 692, 85, 708]
+      ZOrder		      -5
+      ShowName		      off
+      Value		      "Kp_PLL_AFE"
+    }
+    Block {
+      BlockType		      Constant
+      Name		      "Constant11"
+      SID		      "7376"
+      Position		      [15, 707, 85, 723]
+      ZOrder		      -5
+      ShowName		      off
+      Value		      "Ki_PLL_AFE"
+    }
+    Block {
+      BlockType		      Constant
+      Name		      "Constant12"
+      SID		      "7377"
+      Position		      [15, 723, 85, 737]
+      ZOrder		      -5
+      ShowName		      off
+      Value		      "Pref_VSI"
+    }
+    Block {
+      BlockType		      Constant
+      Name		      "Constant13"
+      SID		      "7378"
+      Position		      [15, 737, 85, 753]
+      ZOrder		      -5
+      ShowName		      off
+      Value		      "Qref_VSI"
+    }
+    Block {
+      BlockType		      Constant
+      Name		      "Constant2"
+      SID		      "7367"
+      Position		      [15, 572, 85, 588]
+      ZOrder		      -5
+      ShowName		      off
+      Value		      "Kppq_VSI"
+    }
+    Block {
+      BlockType		      Constant
+      Name		      "Constant3"
+      SID		      "7368"
+      Position		      [15, 586, 85, 604]
+      ZOrder		      -5
+      ShowName		      off
+      Value		      "Kipq_VSI"
+    }
+    Block {
+      BlockType		      Constant
+      Name		      "Constant4"
+      SID		      "7369"
+      Position		      [15, 603, 85, 617]
+      ZOrder		      -5
+      ShowName		      off
+      Value		      "Kp_PLL_VSI"
+    }
+    Block {
+      BlockType		      Constant
+      Name		      "Constant5"
+      SID		      "7370"
+      Position		      [15, 616, 85, 634]
+      ZOrder		      -5
+      ShowName		      off
+      Value		      "Ki_PLL_VSI"
+    }
+    Block {
+      BlockType		      Constant
+      Name		      "Constant6"
+      SID		      "7371"
+      Position		      [15, 633, 85, 647]
+      ZOrder		      -5
+      ShowName		      off
+      Value		      "Kpv_AFE"
+    }
+    Block {
+      BlockType		      Constant
+      Name		      "Constant7"
+      SID		      "7372"
+      Position		      [15, 647, 85, 663]
+      ZOrder		      -5
+      ShowName		      off
+      Value		      "Kpi_AFE"
+    }
+    Block {
+      BlockType		      Constant
+      Name		      "Constant8"
+      SID		      "7373"
+      Position		      [15, 662, 85, 678]
+      ZOrder		      -5
+      ShowName		      off
+      Value		      "Kii_AFE"
+    }
+    Block {
+      BlockType		      Constant
+      Name		      "Constant9"
+      SID		      "7374"
+      Position		      [15, 677, 85, 693]
+      ZOrder		      -5
+      ShowName		      off
+      Value		      "Kpv_AFE"
+    }
+    Block {
+      BlockType		      Demux
+      Name		      "Demux"
+      SID		      "6732"
+      Ports		      [1, 5]
+      Position		      [125, 240, 130, 390]
+      ShowName		      off
+      Outputs		      "5"
+      DisplayOption	      "bar"
+      Port {
+	PortNumber		1
+	Name			"ia_vsi"
+	PropagatedSignals	"ia"
+	RTWStorageClass		"Auto"
+	DataLoggingNameMode	"SignalName"
+      }
+      Port {
+	PortNumber		2
+	Name			"ib_vsi"
+	PropagatedSignals	"ib"
+	RTWStorageClass		"Auto"
+	DataLoggingNameMode	"SignalName"
+      }
+      Port {
+	PortNumber		3
+	Name			"vab_vsi"
+	PropagatedSignals	"vab"
+	RTWStorageClass		"Auto"
+	DataLoggingNameMode	"SignalName"
+      }
+      Port {
+	PortNumber		4
+	Name			"vca_vsi"
+	PropagatedSignals	"vca"
+	RTWStorageClass		"Auto"
+	DataLoggingNameMode	"SignalName"
+      }
+      Port {
+	PortNumber		5
+	Name			"vdc_vsi"
+	PropagatedSignals	"vdc"
+	RTWStorageClass		"Auto"
+	DataLoggingNameMode	"SignalName"
+      }
+    }
+    Block {
+      BlockType		      Demux
+      Name		      "Demux1"
+      SID		      "7006"
+      Ports		      [1, 5]
+      Position		      [125, 390, 130, 540]
+      ShowName		      off
+      Outputs		      "5"
+      DisplayOption	      "bar"
+      Port {
+	PortNumber		1
+	Name			"ia_afe"
+	RTWStorageClass		"Auto"
+	DataLoggingNameMode	"SignalName"
+      }
+      Port {
+	PortNumber		2
+	Name			"ib_afe"
+	RTWStorageClass		"Auto"
+	DataLoggingNameMode	"SignalName"
+      }
+      Port {
+	PortNumber		3
+	Name			"vab_afe"
+	RTWStorageClass		"Auto"
+	DataLoggingNameMode	"SignalName"
+      }
+      Port {
+	PortNumber		4
+	Name			"vbc_afe"
+	RTWStorageClass		"Auto"
+	DataLoggingNameMode	"SignalName"
+      }
+      Port {
+	PortNumber		5
+	Name			"vdc_afe"
+	RTWStorageClass		"Auto"
+	DataLoggingNameMode	"SignalName"
+      }
+    }
+    Block {
+      BlockType		      From
+      Name		      "From1"
+      SID		      "6733"
+      Position		      [40, 303, 100, 327]
+      NamePlacement	      "alternate"
+      ShowName		      off
+      CloseFcn		      "tagdialog Close"
+      GotoTag		      "ctrl_s_vsi"
+    }
+    Block {
+      BlockType		      From
+      Name		      "From12"
+      SID		      "6734"
+      Position		      [545, 623, 595, 637]
+      NamePlacement	      "alternate"
+      ShowName		      off
+      CloseFcn		      "tagdialog Close"
+      GotoTag		      "va_vsi"
+    }
+    Block {
+      BlockType		      From
+      Name		      "From13"
+      SID		      "6735"
+      Position		      [545, 638, 595, 652]
+      NamePlacement	      "alternate"
+      ShowName		      off
+      CloseFcn		      "tagdialog Close"
+      GotoTag		      "vb_vsi"
+    }
+    Block {
+      BlockType		      From
+      Name		      "From14"
+      SID		      "6736"
+      Position		      [545, 653, 595, 667]
+      NamePlacement	      "alternate"
+      ShowName		      off
+      CloseFcn		      "tagdialog Close"
+      GotoTag		      "vc_vsi"
+    }
+    Block {
+      BlockType		      From
+      Name		      "From2"
+      SID		      "7158"
+      Position		      [545, 673, 595, 687]
+      NamePlacement	      "alternate"
+      ShowName		      off
+      CloseFcn		      "tagdialog Close"
+      GotoTag		      "ia_load"
+    }
+    Block {
+      BlockType		      From
+      Name		      "From3"
+      SID		      "7379"
+      Position		      [545, 543, 595, 557]
+      NamePlacement	      "alternate"
+      ShowName		      off
+      CloseFcn		      "tagdialog Close"
+      GotoTag		      "va_vsi"
+    }
+    Block {
+      BlockType		      From
+      Name		      "From4"
+      SID		      "7172"
+      Position		      [545, 688, 595, 702]
+      NamePlacement	      "alternate"
+      ShowName		      off
+      CloseFcn		      "tagdialog Close"
+      GotoTag		      "ib_load"
+    }
+    Block {
+      BlockType		      From
+      Name		      "From5"
+      SID		      "7173"
+      Position		      [545, 703, 595, 717]
+      NamePlacement	      "alternate"
+      ShowName		      off
+      CloseFcn		      "tagdialog Close"
+      GotoTag		      "ic_load"
+    }
+    Block {
+      BlockType		      From
+      Name		      "From6"
+      SID		      "7380"
+      Position		      [545, 518, 595, 532]
+      NamePlacement	      "alternate"
+      ShowName		      off
+      CloseFcn		      "tagdialog Close"
+      GotoTag		      "ia_load"
+    }
+    Block {
+      BlockType		      From
+      Name		      "From8"
+      SID		      "6738"
+      Position		      [145, 37, 225, 53]
+      ShowName		      off
+      CloseFcn		      "tagdialog Close"
+      GotoTag		      "Gate_S_vsi"
+    }
+    Block {
+      BlockType		      From
+      Name		      "From9"
+      SID		      "7007"
+      Position		      [40, 453, 100, 477]
+      NamePlacement	      "alternate"
+      ShowName		      off
+      CloseFcn		      "tagdialog Close"
+      GotoTag		      "ctrl_s_afe"
+    }
+    Block {
+      BlockType		      Gain
+      Name		      "Gain"
+      SID		      "7381"
+      Position		      [625, 510, 655, 540]
+      ZOrder		      -8
+      ShowName		      off
+      Gain		      "10"
+      ParamDataTypeStr	      "Inherit: Inherit via internal rule"
+      OutDataTypeStr	      "Inherit: Inherit via internal rule"
+      SaturateOnIntegerOverflow	off
+    }
+    Block {
+      BlockType		      Goto
+      Name		      "Goto1"
+      SID		      "6739"
+      Position		      [390, 30, 460, 50]
+      ShowName		      off
+      GotoTag		      "ctrl_s_vsi"
+      TagVisibility	      "local"
+    }
+    Block {
+      BlockType		      Goto
+      Name		      "Goto10"
+      SID		      "6740"
+      Position		      [510, 63, 560, 77]
+      ShowName		      off
+      GotoTag		      "va_vsi"
+      TagVisibility	      "local"
+    }
+    Block {
+      BlockType		      Goto
+      Name		      "Goto11"
+      SID		      "6741"
+      Position		      [510, 108, 560, 122]
+      ShowName		      off
+      GotoTag		      "vb_vsi"
+      TagVisibility	      "local"
+    }
+    Block {
+      BlockType		      Goto
+      Name		      "Goto12"
+      SID		      "6742"
+      Position		      [510, 158, 560, 172]
+      ShowName		      off
+      GotoTag		      "vc_vsi"
+      TagVisibility	      "local"
+    }
+    Block {
+      BlockType		      Goto
+      Name		      "Goto2"
+      SID		      "7168"
+      Position		      [635, 123, 685, 137]
+      ShowName		      off
+      GotoTag		      "ib_load"
+      TagVisibility	      "local"
+    }
+    Block {
+      BlockType		      Goto
+      Name		      "Goto3"
+      SID		      "7164"
+      Position		      [70, 138, 120, 152]
+      BlockMirror	      on
+      NamePlacement	      "alternate"
+      ShowName		      off
+      GotoTag		      "vdc_vsi"
+      TagVisibility	      "local"
+    }
+    Block {
+      BlockType		      Goto
+      Name		      "Goto4"
+      SID		      "7170"
+      Position		      [635, 173, 685, 187]
+      ShowName		      off
+      GotoTag		      "ic_load"
+      TagVisibility	      "local"
+    }
+    Block {
+      BlockType		      Goto
+      Name		      "Goto5"
+      SID		      "7157"
+      Position		      [635, 73, 685, 87]
+      ShowName		      off
+      GotoTag		      "ia_load"
+      TagVisibility	      "local"
+    }
+    Block {
+      BlockType		      Goto
+      Name		      "Goto8"
+      SID		      "6744"
+      Position		      [690, 347, 765, 363]
+      ShowName		      off
+      GotoTag		      "Gate_S_vsi"
+      TagVisibility	      "local"
+    }
+    Block {
+      BlockType		      Reference
+      Name		      "Ground"
+      SID		      "7174"
+      Ports		      [0, 0, 0, 0, 0, 1]
+      Position		      [845, 129, 870, 151]
+      NamePlacement	      "alternate"
+      ShowName		      off
+      LibraryVersion	      "1.2088"
+      FontName		      "Verdana"
+      FontSize		      11
+      SourceBlock	      "powerlib/Elements/Ground"
+      SourceType	      "Ground"
+      LConnTagsString	      "a"
+    }
+    Block {
+      BlockType		      Reference
+      Name		      "Ground1"
+      SID		      "7180"
+      Ports		      [0, 0, 0, 0, 0, 1]
+      Position		      [480, 194, 505, 216]
+      NamePlacement	      "alternate"
+      ShowName		      off
+      LibraryVersion	      "1.2088"
+      FontName		      "Verdana"
+      FontSize		      11
+      SourceBlock	      "powerlib/Elements/Ground"
+      SourceType	      "Ground"
+      LConnTagsString	      "a"
+    }
+    Block {
+      BlockType		      Mux
+      Name		      "Mux1"
+      SID		      "7171"
+      Ports		      [3, 1]
+      Position		      [615, 669, 620, 721]
+      ShowName		      off
+      Inputs		      "3"
+      DisplayOption	      "bar"
+      Port {
+	PortNumber		1
+	Name			"VSI_Iabc"
+	PropagatedSignals	", , "
+	RTWStorageClass		"Auto"
+	DataLoggingNameMode	"SignalName"
+      }
+    }
+    Block {
+      BlockType		      Mux
+      Name		      "Mux2"
+      SID		      "7383"
+      Ports		      [2, 1]
+      Position		      [685, 511, 690, 564]
+      ShowName		      off
+      Inputs		      "2"
+      DisplayOption	      "bar"
+    }
+    Block {
+      BlockType		      Mux
+      Name		      "Mux6"
+      SID		      "6745"
+      Ports		      [3, 1]
+      Position		      [615, 619, 620, 671]
+      ShowName		      off
+      Inputs		      "3"
+      DisplayOption	      "bar"
+      Port {
+	PortNumber		1
+	Name			"VSI_Vabc"
+	PropagatedSignals	", , "
+	RTWStorageClass		"Auto"
+	DataLoggingNameMode	"SignalName"
+      }
+    }
+    Block {
+      BlockType		      Product
+      Name		      "Product"
+      SID		      "7178"
+      Ports		      [2, 1]
+      Position		      [615, 337, 645, 368]
+      InputSameDT	      off
+      OutDataTypeStr	      "Inherit: Inherit via internal rule"
+      SaturateOnIntegerOverflow	off
+    }
+    Block {
+      BlockType		      UnitDelay
+      Name		      "Unit Delay"
+      SID		      "7148"
+      Position		      [405, 293, 440, 327]
+      ShowName		      off
+      InputProcessing	      "Elements as channels (sample based)"
+      SampleTime	      "-1"
+    }
+    Block {
+      BlockType		      UnitDelay
+      Name		      "Unit Delay1"
+      SID		      "7149"
+      Position		      [405, 328, 440, 362]
+      ShowName		      off
+      InputProcessing	      "Elements as channels (sample based)"
+      SampleTime	      "-1"
+    }
+    Block {
+      BlockType		      UnitDelay
+      Name		      "Unit Delay2"
+      SID		      "7150"
+      Position		      [405, 363, 440, 397]
+      ShowName		      off
+      InputProcessing	      "Elements as channels (sample based)"
+      SampleTime	      "-1"
+    }
+    Block {
+      BlockType		      SubSystem
+      Name		      "VSI"
+      SID		      "6755"
+      Ports		      [1, 1, 0, 0, 0, 2, 3]
+      Position		      [260, 13, 345, 217]
+      MinAlgLoopOccurrences   off
+      PropExecContextOutsideSubsystem off
+      RTWSystemCode	      "Auto"
+      FunctionWithSeparateData off
+      Opaque		      off
+      RequestExecContextInheritance off
+      MaskHideContents	      off
+      System {
+	Name			"VSI"
+	Location		[233, 254, 1170, 837]
+	Open			off
+	ModelBrowserVisibility	off
+	ModelBrowserWidth	200
+	ScreenColor		"white"
+	PaperOrientation	"landscape"
+	PaperPositionMode	"auto"
+	PaperType		"usletter"
+	PaperUnits		"inches"
+	TiledPaperMargins	[0.500000, 0.500000, 0.500000, 0.500000]
+	TiledPageScale		1
+	ShowPageBoundaries	off
+	ZoomFactor		"100"
+	Block {
+	  BlockType		  Inport
+	  Name			  "In1"
+	  SID			  "6756"
+	  Position		  [50, 538, 80, 552]
+	  IconDisplay		  "Port number"
+	}
+	Block {
+	  BlockType		  Sum
+	  Name			  "Add1"
+	  SID			  "6757"
+	  Ports			  [2, 1]
+	  Position		  [110, 342, 140, 373]
+	  Inputs		  "--"
+	  InputSameDT		  off
+	  OutDataTypeStr	  "Inherit: Inherit via internal rule"
+	  SaturateOnIntegerOverflow off
+	}
+	Block {
+	  BlockType		  Sum
+	  Name			  "Add5"
+	  SID			  "6758"
+	  Ports			  [2, 1]
+	  Position		  [110, 282, 140, 313]
+	  Inputs		  "--"
+	  InputSameDT		  off
+	  OutDataTypeStr	  "Inherit: Inherit via internal rule"
+	  SaturateOnIntegerOverflow off
+	}
+	Block {
+	  BlockType		  BusCreator
+	  Name			  "Bus\nCreator"
+	  SID			  "6759"
+	  Ports			  [3, 1]
+	  Position		  [405, 276, 410, 324]
+	  ShowName		  off
+	  FontName		  "Arial"
+	  FontSize		  12
+	  Inputs		  "3"
+	  DisplayOption		  "bar"
+	}
+	Block {
+	  BlockType		  BusCreator
+	  Name			  "Bus\nCreator1"
+	  SID			  "6760"
+	  Ports			  [3, 1]
+	  Position		  [405, 331, 410, 379]
+	  ShowName		  off
+	  FontName		  "Arial"
+	  FontSize		  12
+	  Inputs		  "3"
+	  DisplayOption		  "bar"
+	}
+	Block {
+	  BlockType		  Display
+	  Name			  "Display"
+	  SID			  "6765"
+	  Ports			  [1]
+	  Position		  [500, 415, 590, 445]
+	  Decimation		  "1"
+	  Lockdown		  off
+	}
+	Block {
+	  BlockType		  From
+	  Name			  "From1"
+	  SID			  "6766"
+	  Position		  [40, 423, 90, 437]
+	  ShowName		  off
+	  CloseFcn		  "tagdialog Close"
+	  GotoTag		  "ib"
+	  Port {
+	    PortNumber		    1
+	    Name		    "ib"
+	    RTWStorageClass	    "Auto"
+	    DataLoggingNameMode	    "SignalName"
+	  }
+	}
+	Block {
+	  BlockType		  From
+	  Name			  "From10"
+	  SID			  "6767"
+	  Position		  [495, 353, 545, 367]
+	  ShowName		  off
+	  CloseFcn		  "tagdialog Close"
+	  GotoTag		  "ib"
+	}
+	Block {
+	  BlockType		  From
+	  Name			  "From11"
+	  SID			  "6768"
+	  Position		  [495, 368, 545, 382]
+	  ShowName		  off
+	  CloseFcn		  "tagdialog Close"
+	  GotoTag		  "ic"
+	}
+	Block {
+	  BlockType		  From
+	  Name			  "From12"
+	  SID			  "6769"
+	  Position		  [310, 448, 360, 462]
+	  ShowName		  off
+	  CloseFcn		  "tagdialog Close"
+	  GotoTag		  "vab"
+	}
+	Block {
+	  BlockType		  From
+	  Name			  "From13"
+	  SID			  "6770"
+	  Position		  [310, 463, 360, 477]
+	  ShowName		  off
+	  CloseFcn		  "tagdialog Close"
+	  GotoTag		  "vbc"
+	}
+	Block {
+	  BlockType		  From
+	  Name			  "From14"
+	  SID			  "6771"
+	  Position		  [310, 478, 360, 492]
+	  ShowName		  off
+	  CloseFcn		  "tagdialog Close"
+	  GotoTag		  "vca"
+	}
+	Block {
+	  BlockType		  From
+	  Name			  "From15"
+	  SID			  "6772"
+	  Position		  [495, 338, 545, 352]
+	  ShowName		  off
+	  CloseFcn		  "tagdialog Close"
+	  GotoTag		  "ia"
+	}
+	Block {
+	  BlockType		  From
+	  Name			  "From16"
+	  SID			  "6773"
+	  Position		  [40, 283, 90, 297]
+	  ShowName		  off
+	  CloseFcn		  "tagdialog Close"
+	  GotoTag		  "ia"
+	}
+	Block {
+	  BlockType		  From
+	  Name			  "From17"
+	  SID			  "6774"
+	  Position		  [40, 298, 90, 312]
+	  ShowName		  off
+	  CloseFcn		  "tagdialog Close"
+	  GotoTag		  "ib"
+	}
+	Block {
+	  BlockType		  From
+	  Name			  "From18"
+	  SID			  "6775"
+	  Position		  [40, 343, 90, 357]
+	  ShowName		  off
+	  CloseFcn		  "tagdialog Close"
+	  GotoTag		  "vab"
+	}
+	Block {
+	  BlockType		  From
+	  Name			  "From19"
+	  SID			  "6776"
+	  Position		  [40, 358, 90, 372]
+	  ShowName		  off
+	  CloseFcn		  "tagdialog Close"
+	  GotoTag		  "vca"
+	}
+	Block {
+	  BlockType		  From
+	  Name			  "From20"
+	  SID			  "6777"
+	  Position		  [310, 278, 360, 292]
+	  ShowName		  off
+	  CloseFcn		  "tagdialog Close"
+	  GotoTag		  "ia"
+	  Port {
+	    PortNumber		    1
+	    Name		    "ia"
+	    RTWStorageClass	    "Auto"
+	    DataLoggingNameMode	    "SignalName"
+	  }
+	}
+	Block {
+	  BlockType		  From
+	  Name			  "From21"
+	  SID			  "6778"
+	  Position		  [310, 293, 360, 307]
+	  ShowName		  off
+	  CloseFcn		  "tagdialog Close"
+	  GotoTag		  "ib"
+	  Port {
+	    PortNumber		    1
+	    Name		    "ib"
+	    RTWStorageClass	    "Auto"
+	    DataLoggingNameMode	    "SignalName"
+	  }
+	}
+	Block {
+	  BlockType		  From
+	  Name			  "From22"
+	  SID			  "6779"
+	  Position		  [310, 308, 360, 322]
+	  ShowName		  off
+	  CloseFcn		  "tagdialog Close"
+	  GotoTag		  "ic"
+	  Port {
+	    PortNumber		    1
+	    Name		    "ic"
+	    RTWStorageClass	    "Auto"
+	    DataLoggingNameMode	    "SignalName"
+	  }
+	}
+	Block {
+	  BlockType		  From
+	  Name			  "From23"
+	  SID			  "6780"
+	  Position		  [310, 333, 360, 347]
+	  ShowName		  off
+	  CloseFcn		  "tagdialog Close"
+	  GotoTag		  "vab"
+	  Port {
+	    PortNumber		    1
+	    Name		    "vab"
+	    RTWStorageClass	    "Auto"
+	    DataLoggingNameMode	    "SignalName"
+	  }
+	}
+	Block {
+	  BlockType		  From
+	  Name			  "From24"
+	  SID			  "6781"
+	  Position		  [310, 348, 360, 362]
+	  ShowName		  off
+	  CloseFcn		  "tagdialog Close"
+	  GotoTag		  "vbc"
+	  Port {
+	    PortNumber		    1
+	    Name		    "vbc"
+	    RTWStorageClass	    "Auto"
+	    DataLoggingNameMode	    "SignalName"
+	  }
+	}
+	Block {
+	  BlockType		  From
+	  Name			  "From25"
+	  SID			  "6782"
+	  Position		  [310, 363, 360, 377]
+	  ShowName		  off
+	  CloseFcn		  "tagdialog Close"
+	  GotoTag		  "vca"
+	  Port {
+	    PortNumber		    1
+	    Name		    "vca"
+	    RTWStorageClass	    "Auto"
+	    DataLoggingNameMode	    "SignalName"
+	  }
+	}
+	Block {
+	  BlockType		  From
+	  Name			  "From26"
+	  SID			  "6783"
+	  Position		  [40, 498, 90, 512]
+	  ShowName		  off
+	  CloseFcn		  "tagdialog Close"
+	  GotoTag		  "vdc"
+	  Port {
+	    PortNumber		    1
+	    Name		    "vdc"
+	    RTWStorageClass	    "Auto"
+	    DataLoggingNameMode	    "SignalName"
+	  }
+	}
+	Block {
+	  BlockType		  From
+	  Name			  "From3"
+	  SID			  "6784"
+	  Position		  [40, 398, 90, 412]
+	  ShowName		  off
+	  CloseFcn		  "tagdialog Close"
+	  GotoTag		  "ia"
+	  Port {
+	    PortNumber		    1
+	    Name		    "ia"
+	    RTWStorageClass	    "Auto"
+	    DataLoggingNameMode	    "SignalName"
+	  }
+	}
+	Block {
+	  BlockType		  From
+	  Name			  "From6"
+	  SID			  "6785"
+	  Position		  [40, 448, 90, 462]
+	  ShowName		  off
+	  CloseFcn		  "tagdialog Close"
+	  GotoTag		  "vab"
+	  Port {
+	    PortNumber		    1
+	    Name		    "vab"
+	    RTWStorageClass	    "Auto"
+	    DataLoggingNameMode	    "SignalName"
+	  }
+	}
+	Block {
+	  BlockType		  From
+	  Name			  "From7"
+	  SID			  "6786"
+	  Position		  [40, 473, 90, 487]
+	  ShowName		  off
+	  CloseFcn		  "tagdialog Close"
+	  GotoTag		  "vca"
+	  Port {
+	    PortNumber		    1
+	    Name		    "vca"
+	    RTWStorageClass	    "Auto"
+	    DataLoggingNameMode	    "SignalName"
+	  }
+	}
+	Block {
+	  BlockType		  From
+	  Name			  "From8"
+	  SID			  "6787"
+	  Position		  [400, 63, 450, 77]
+	  BlockMirror		  on
+	  NamePlacement		  "alternate"
+	  ShowName		  off
+	  CloseFcn		  "tagdialog Close"
+	  GotoTag		  "Gate_S"
+	}
+	Block {
+	  BlockType		  Goto
+	  Name			  "Goto1"
+	  SID			  "6788"
+	  Position		  [865, 118, 915, 132]
+	  ShowName		  off
+	  GotoTag		  "vab"
+	  TagVisibility		  "local"
+	}
+	Block {
+	  BlockType		  Goto
+	  Name			  "Goto10"
+	  SID			  "6789"
+	  Position		  [435, 293, 485, 307]
+	  ShowName		  off
+	  GotoTag		  "iabc"
+	  TagVisibility		  "local"
+	}
+	Block {
+	  BlockType		  Goto
+	  Name			  "Goto11"
+	  SID			  "6790"
+	  Position		  [435, 348, 485, 362]
+	  ShowName		  off
+	  GotoTag		  "vabc"
+	  TagVisibility		  "local"
+	}
+	Block {
+	  BlockType		  Goto
+	  Name			  "Goto12"
+	  SID			  "6791"
+	  Position		  [165, 293, 215, 307]
+	  ShowName		  off
+	  GotoTag		  "ic"
+	  TagVisibility		  "local"
+	}
+	Block {
+	  BlockType		  Goto
+	  Name			  "Goto3"
+	  SID			  "6792"
+	  Position		  [865, 173, 915, 187]
+	  ShowName		  off
+	  GotoTag		  "vca"
+	  TagVisibility		  "local"
+	}
+	Block {
+	  BlockType		  Goto
+	  Name			  "Goto4"
+	  SID			  "6793"
+	  Position		  [165, 353, 215, 367]
+	  ShowName		  off
+	  GotoTag		  "vbc"
+	  TagVisibility		  "local"
+	}
+	Block {
+	  BlockType		  Goto
+	  Name			  "Goto5"
+	  SID			  "6794"
+	  Position		  [585, 103, 635, 117]
+	  ShowName		  off
+	  GotoTag		  "ia"
+	  TagVisibility		  "local"
+	}
+	Block {
+	  BlockType		  Goto
+	  Name			  "Goto6"
+	  SID			  "6795"
+	  Position		  [585, 158, 635, 172]
+	  ShowName		  off
+	  GotoTag		  "ib"
+	  TagVisibility		  "local"
+	}
+	Block {
+	  BlockType		  Goto
+	  Name			  "Goto7"
+	  SID			  "6796"
+	  Position		  [170, 248, 220, 262]
+	  ShowName		  off
+	  GotoTag		  "vdc"
+	  TagVisibility		  "local"
+	}
+	Block {
+	  BlockType		  Goto
+	  Name			  "Goto8"
+	  SID			  "6797"
+	  Position		  [140, 538, 190, 552]
+	  ShowName		  off
+	  GotoTag		  "Gate_S"
+	  TagVisibility		  "local"
+	}
+	Block {
+	  BlockType		  Reference
+	  Name			  "IGBT_module"
+	  SID			  "6798"
+	  Ports			  [1, 0, 0, 0, 0, 3, 2]
+	  Position		  [245, 41, 365, 249]
+	  BlockMirror		  on
+	  NamePlacement		  "alternate"
+	  LibraryVersion	  "1.2088"
+	  FontName		  "Verdana"
+	  FontSize		  11
+	  SourceBlock		  "powerlib/Power\nElectronics/Universal Bridge"
+	  SourceType		  "Universal Bridge"
+	  Arms			  "3"
+	  SnubberResistance	  "inf"
+	  SnubberCapacitance	  "inf"
+	  Device		  "IGBT / Diodes"
+	  Ron			  "Rsd"
+	  Lon			  "0"
+	  ForwardVoltages	  "[Vfs Vfd]"
+	  ForwardVoltage	  "0"
+	  GTOparameters		  "[ 10e-6 , 20e-6 ]"
+	  IGBTparameters	  "[ 0, 0 ]"
+	  Measurements		  "None"
+	  Measurements_2	  "None"
+	  converterType		  "Rectifier"
+	}
+	Block {
+	  BlockType		  Reference
+	  Name			  "L1"
+	  SID			  "6799"
+	  Ports			  [0, 0, 0, 0, 0, 1, 1]
+	  Position		  [400, 101, 470, 129]
+	  LibraryVersion	  "1.2088"
+	  FontName		  "Verdana"
+	  FontSize		  11
+	  SourceBlock		  "powerlib/Elements/Series RLC Branch"
+	  SourceType		  "Series RLC Branch"
+	  LConnTagsString	  "__new0"
+	  RConnTagsString	  "__new0"
+	  BranchType		  "RL"
+	  Resistance		  "RLa"
+	  Inductance		  "La"
+	  SetiL0		  off
+	  InitialCurrent	  "0"
+	  Capacitance		  "1e-6"
+	  Setx0			  off
+	  InitialVoltage	  "0"
+	  Measurements		  "None"
+	}
+	Block {
+	  BlockType		  Reference
+	  Name			  "L2"
+	  SID			  "6800"
+	  Ports			  [0, 0, 0, 0, 0, 1, 1]
+	  Position		  [400, 156, 470, 184]
+	  LibraryVersion	  "1.2088"
+	  FontName		  "Verdana"
+	  FontSize		  11
+	  SourceBlock		  "powerlib/Elements/Series RLC Branch"
+	  SourceType		  "Series RLC Branch"
+	  LConnTagsString	  "__new0"
+	  RConnTagsString	  "__new0"
+	  BranchType		  "RL"
+	  Resistance		  "RLb"
+	  Inductance		  "Lb"
+	  SetiL0		  off
+	  InitialCurrent	  "0"
+	  Capacitance		  "1e-6"
+	  Setx0			  off
+	  InitialVoltage	  "0"
+	  Measurements		  "None"
+	}
+	Block {
+	  BlockType		  Reference
+	  Name			  "L3"
+	  SID			  "6801"
+	  Ports			  [0, 0, 0, 0, 0, 1, 1]
+	  Position		  [400, 211, 470, 239]
+	  LibraryVersion	  "1.2088"
+	  FontName		  "Verdana"
+	  FontSize		  11
+	  SourceBlock		  "powerlib/Elements/Series RLC Branch"
+	  SourceType		  "Series RLC Branch"
+	  LConnTagsString	  "__new0"
+	  RConnTagsString	  "__new0"
+	  BranchType		  "RL"
+	  Resistance		  "RLc"
+	  Inductance		  "Lc"
+	  SetiL0		  off
+	  InitialCurrent	  "0"
+	  Capacitance		  "1e-6"
+	  Setx0			  off
+	  InitialVoltage	  "0"
+	  Measurements		  "None"
+	}
+	Block {
+	  BlockType		  Reference
+	  Name			  "L4"
+	  SID			  "7384"
+	  Ports			  [0, 0, 0, 0, 0, 1, 1]
+	  Position		  [657, 255, 693, 295]
+	  BlockRotation		  270
+	  BlockMirror		  on
+	  NamePlacement		  "alternate"
+	  ShowName		  off
+	  LibraryVersion	  "1.2088"
+	  FontName		  "Verdana"
+	  FontSize		  11
+	  SourceBlock		  "powerlib/Elements/Series RLC Branch"
+	  SourceType		  "Series RLC Branch"
+	  LConnTagsString	  "__new0"
+	  RConnTagsString	  "__new0"
+	  BranchType		  "RC"
+	  Resistance		  "1e-3"
+	  Inductance		  "La"
+	  SetiL0		  off
+	  InitialCurrent	  "0"
+	  Capacitance		  "32e-6"
+	  Setx0			  off
+	  InitialVoltage	  "0"
+	  Measurements		  "None"
+	}
+	Block {
+	  BlockType		  Reference
+	  Name			  "L5"
+	  SID			  "7385"
+	  Ports			  [0, 0, 0, 0, 0, 1, 1]
+	  Position		  [622, 255, 658, 295]
+	  BlockRotation		  270
+	  BlockMirror		  on
+	  NamePlacement		  "alternate"
+	  ShowName		  off
+	  LibraryVersion	  "1.2088"
+	  FontName		  "Verdana"
+	  FontSize		  11
+	  SourceBlock		  "powerlib/Elements/Series RLC Branch"
+	  SourceType		  "Series RLC Branch"
+	  LConnTagsString	  "__new0"
+	  RConnTagsString	  "__new0"
+	  BranchType		  "RC"
+	  Resistance		  "1e-3"
+	  Inductance		  "La"
+	  SetiL0		  off
+	  InitialCurrent	  "0"
+	  Capacitance		  "32e-6"
+	  Setx0			  off
+	  InitialVoltage	  "0"
+	  Measurements		  "None"
+	}
+	Block {
+	  BlockType		  Reference
+	  Name			  "L6"
+	  SID			  "7386"
+	  Ports			  [0, 0, 0, 0, 0, 1, 1]
+	  Position		  [692, 255, 728, 295]
+	  BlockRotation		  270
+	  BlockMirror		  on
+	  NamePlacement		  "alternate"
+	  ShowName		  off
+	  LibraryVersion	  "1.2088"
+	  FontName		  "Verdana"
+	  FontSize		  11
+	  SourceBlock		  "powerlib/Elements/Series RLC Branch"
+	  SourceType		  "Series RLC Branch"
+	  LConnTagsString	  "__new0"
+	  RConnTagsString	  "__new0"
+	  BranchType		  "RC"
+	  Resistance		  "1e-3"
+	  Inductance		  "La"
+	  SetiL0		  off
+	  InitialCurrent	  "0"
+	  Capacitance		  "32e-6"
+	  Setx0			  off
+	  InitialVoltage	  "0"
+	  Measurements		  "None"
+	}
+	Block {
+	  BlockType		  Mux
+	  Name			  "Mux1"
+	  SID			  "6802"
+	  Ports			  [5, 1]
+	  Position		  [140, 394, 145, 516]
+	  ShowName		  off
+	  Inputs		  "5"
+	  DisplayOption		  "bar"
+	}
+	Block {
+	  BlockType		  Mux
+	  Name			  "Mux2"
+	  SID			  "6803"
+	  Ports			  [3, 1]
+	  Position		  [575, 335, 580, 385]
+	  ShowName		  off
+	  Inputs		  "3"
+	  DisplayOption		  "bar"
+	}
+	Block {
+	  BlockType		  Mux
+	  Name			  "Mux3"
+	  SID			  "6804"
+	  Ports			  [3, 1]
+	  Position		  [390, 445, 395, 495]
+	  ShowName		  off
+	  Inputs		  "3"
+	  DisplayOption		  "bar"
+	}
+	Block {
+	  BlockType		  Reference
+	  Name			  "RMS"
+	  SID			  "6805"
+	  Ports			  [1, 1]
+	  Position		  [415, 416, 455, 444]
+	  LibraryVersion	  "1.644"
+	  FontName		  "Verdana"
+	  FontSize		  11
+	  SourceBlock		  "powerlib_extras/Measurements/RMS"
+	  SourceType		  "RMS"
+	  f1			  "60"
+	}
+	Block {
+	  BlockType		  Reference
+	  Name			  "cm1"
+	  SID			  "6806"
+	  Ports			  [0, 1, 0, 0, 0, 1, 1]
+	  Position		  [515, 103, 540, 127]
+	  NamePlacement		  "alternate"
+	  ShowName		  off
+	  LibraryVersion	  "1.2088"
+	  FontName		  "Verdana"
+	  FontSize		  11
+	  SourceBlock		  "powerlib/Measurements/Current Measurement"
+	  SourceType		  "Current Measurement"
+	  PhasorSimulation	  off
+	  OutputType		  "Complex"
+	  PSBequivalent		  "0"
+	}
+	Block {
+	  BlockType		  Reference
+	  Name			  "cm2"
+	  SID			  "6807"
+	  Ports			  [0, 1, 0, 0, 0, 1, 1]
+	  Position		  [515, 158, 540, 182]
+	  NamePlacement		  "alternate"
+	  ShowName		  off
+	  LibraryVersion	  "1.2088"
+	  FontName		  "Verdana"
+	  FontSize		  11
+	  SourceBlock		  "powerlib/Measurements/Current Measurement"
+	  SourceType		  "Current Measurement"
+	  PhasorSimulation	  off
+	  OutputType		  "Complex"
+	  PSBequivalent		  "0"
+	}
+	Block {
+	  BlockType		  Scope
+	  Name			  "iabc"
+	  SID			  "6808"
+	  Ports			  [1]
+	  Position		  [605, 344, 635, 376]
+	  NamePlacement		  "alternate"
+	  Floating		  off
+	  Location		  [365, 474, 1004, 880]
+	  Open			  off
+	  NumInputPorts		  "1"
+	  List {
+	    ListType		    AxesTitles
+	    axes1		    "%<SignalLabel>"
+	  }
+	  List {
+	    ListType		    ScopeGraphics
+	    FigureColor		    "[0.5 0.5 0.5]"
+	    AxesColor		    "[0 0 0]"
+	    AxesTickColor	    "[1 1 1]"
+	    LineColors		    "[1 1 0;1 0 1;0 1 1;1 0 0;0 1 0;0 0 1]"
+	    LineStyles		    "-|-|-|-|-|-"
+	    LineWidths		    "[0.5 0.5 0.5 0.5 0.5 0.5]"
+	    MarkerStyles	    "none|none|none|none|none|none"
+	  }
+	  TimeRange		  "0.06"
+	  YMin			  "-15"
+	  YMax			  "15"
+	  SaveName		  "iabc_L"
+	  DataFormat		  "StructureWithTime"
+	  LimitDataPoints	  off
+	  SampleTime		  "0"
+	}
+	Block {
+	  BlockType		  Scope
+	  Name			  "iabc1"
+	  SID			  "7389"
+	  Ports			  [1]
+	  Position		  [575, 44, 605, 76]
+	  NamePlacement		  "alternate"
+	  Floating		  off
+	  Location		  [1797, 267, 2436, 673]
+	  Open			  off
+	  NumInputPorts		  "1"
+	  ZoomMode		  "xonly"
+	  List {
+	    ListType		    AxesTitles
+	    axes1		    "%<SignalLabel>"
+	  }
+	  List {
+	    ListType		    ScopeGraphics
+	    FigureColor		    "[0.5 0.5 0.5]"
+	    AxesColor		    "[0 0 0]"
+	    AxesTickColor	    "[1 1 1]"
+	    LineColors		    "[1 1 0;1 0 1;0 1 1;1 0 0;0 1 0;0 0 1]"
+	    LineStyles		    "-|-|-|-|-|-"
+	    LineWidths		    "[0.5 0.5 0.5 0.5 0.5 0.5]"
+	    MarkerStyles	    "none|none|none|none|none|none"
+	  }
+	  TimeRange		  "0.06"
+	  YMin			  "-80"
+	  YMax			  "80"
+	  SaveName		  "iabc_L1"
+	  DataFormat		  "StructureWithTime"
+	  LimitDataPoints	  off
+	  SampleTime		  "0"
+	}
+	Block {
+	  BlockType		  Scope
+	  Name			  "vabc1"
+	  SID			  "6809"
+	  Ports			  [1]
+	  Position		  [545, 504, 575, 536]
+	  NamePlacement		  "alternate"
+	  Floating		  off
+	  Location		  [665, 482, 1418, 845]
+	  Open			  off
+	  NumInputPorts		  "1"
+	  ZoomMode		  "xonly"
+	  List {
+	    ListType		    AxesTitles
+	    axes1		    "%<SignalLabel>"
+	  }
+	  List {
+	    ListType		    ScopeGraphics
+	    FigureColor		    "[0.5 0.5 0.5]"
+	    AxesColor		    "[0 0 0]"
+	    AxesTickColor	    "[1 1 1]"
+	    LineColors		    "[1 1 0;1 0 1;0 1 1;1 0 0;0 1 0;0 0 1]"
+	    LineStyles		    "-|-|-|-|-|-"
+	    LineWidths		    "[0.5 0.5 0.5 0.5 0.5 0.5]"
+	    MarkerStyles	    "none|none|none|none|none|none"
+	  }
+	  TimeRange		  "0.01"
+	  YMin			  "-80"
+	  YMax			  "80"
+	  SaveName		  "vabc"
+	  DataFormat		  "StructureWithTime"
+	  LimitDataPoints	  off
+	  SampleTime		  "0"
+	}
+	Block {
+	  BlockType		  Scope
+	  Name			  "vabc3"
+	  SID			  "6810"
+	  Ports			  [1]
+	  Position		  [460, 454, 490, 486]
+	  NamePlacement		  "alternate"
+	  Floating		  off
+	  Location		  [16, 524, 746, 831]
+	  Open			  off
+	  NumInputPorts		  "1"
+	  ZoomMode		  "xonly"
+	  List {
+	    ListType		    AxesTitles
+	    axes1		    "%<SignalLabel>"
+	  }
+	  List {
+	    ListType		    ScopeGraphics
+	    FigureColor		    "[0.5 0.5 0.5]"
+	    AxesColor		    "[0 0 0]"
+	    AxesTickColor	    "[1 1 1]"
+	    LineColors		    "[1 1 0;1 0 1;0 1 1;1 0 0;0 1 0;0 0 1]"
+	    LineStyles		    "-|-|-|-|-|-"
+	    LineWidths		    "[0.5 0.5 0.5 0.5 0.5 0.5]"
+	    MarkerStyles	    "none|none|none|none|none|none"
+	  }
+	  TimeRange		  "0.06"
+	  YMin			  "-300"
+	  YMax			  "225"
+	  SaveName		  "vabcll"
+	  DataFormat		  "StructureWithTime"
+	  LimitDataPoints	  off
+	  SampleTime		  "0"
+	}
+	Block {
+	  BlockType		  SubSystem
+	  Name			  "vll2vpn"
+	  SID			  "6811"
+	  Ports			  [1, 1]
+	  Position		  [435, 497, 510, 543]
+	  LibraryVersion	  "1.762"
+	  FontName		  "Arial"
+	  FontSize		  12
+	  MinAlgLoopOccurrences	  off
+	  PropExecContextOutsideSubsystem off
+	  RTWSystemCode		  "Auto"
+	  FunctionWithSeparateData off
+	  Opaque		  off
+	  RequestExecContextInheritance	off
+	  MaskHideContents	  off
+	  System {
+	    Name		    "vll2vpn"
+	    Location		    [161, 325, 893, 721]
+	    Open		    off
+	    ModelBrowserVisibility  off
+	    ModelBrowserWidth	    200
+	    ScreenColor		    "white"
+	    PaperOrientation	    "landscape"
+	    PaperPositionMode	    "auto"
+	    PaperType		    "usletter"
+	    PaperUnits		    "inches"
+	    TiledPaperMargins	    [0.500000, 0.500000, 0.500000, 0.500000]
+	    TiledPageScale	    1
+	    ShowPageBoundaries	    off
+	    ZoomFactor		    "100"
+	    Block {
+	      BlockType		      Inport
+	      Name		      "vabcll"
+	      SID		      "6812"
+	      Position		      [55, 148, 85, 162]
+	      FontName		      "Arial"
+	      FontSize		      12
+	      IconDisplay	      "Port number"
+	    }
+	    Block {
+	      BlockType		      BusCreator
+	      Name		      "Bus\nCreator"
+	      SID		      "6813"
+	      Ports		      [3, 1]
+	      Position		      [390, 55, 395, 295]
+	      ShowName		      off
+	      FontName		      "Arial"
+	      FontSize		      12
+	      Inputs		      "3"
+	      DisplayOption	      "bar"
+	    }
+	    Block {
+	      BlockType		      BusSelector
+	      Name		      "Bus\nSelector"
+	      SID		      "6814"
+	      Ports		      [1, 3]
+	      Position		      [135, 46, 140, 264]
+	      ShowName		      off
+	      FontName		      "Arial"
+	      FontSize		      12
+	      OutputSignals	      "signal1,signal2,signal3"
+	      Port {
+		PortNumber		1
+		Name			"<signal1>"
+		RTWStorageClass		"Auto"
+		DataLoggingNameMode	"SignalName"
+	      }
+	      Port {
+		PortNumber		2
+		Name			"<signal2>"
+		RTWStorageClass		"Auto"
+		DataLoggingNameMode	"SignalName"
+	      }
+	      Port {
+		PortNumber		3
+		Name			"<signal3>"
+		RTWStorageClass		"Auto"
+		DataLoggingNameMode	"SignalName"
+	      }
+	    }
+	    Block {
+	      BlockType		      Gain
+	      Name		      "Gain1"
+	      SID		      "6815"
+	      Position		      [280, 152, 340, 198]
+	      ShowName		      off
+	      FontName		      "Arial"
+	      FontSize		      12
+	      Gain		      "1/3"
+	      ParamDataTypeStr	      "Inherit: Inherit via internal rule"
+	      OutDataTypeStr	      "Inherit: Inherit via internal rule"
+	      SaturateOnIntegerOverflow	off
+	      Port {
+		PortNumber		1
+		Name			"vb"
+		RTWStorageClass		"Auto"
+		DataLoggingNameMode	"SignalName"
+	      }
+	    }
+	    Block {
+	      BlockType		      Gain
+	      Name		      "Gain2"
+	      SID		      "6816"
+	      Position		      [280, 77, 340, 123]
+	      ShowName		      off
+	      FontName		      "Arial"
+	      FontSize		      12
+	      Gain		      "1/3"
+	      ParamDataTypeStr	      "Inherit: Inherit via internal rule"
+	      OutDataTypeStr	      "Inherit: Inherit via internal rule"
+	      SaturateOnIntegerOverflow	off
+	      Port {
+		PortNumber		1
+		Name			"va"
+		RTWStorageClass		"Auto"
+		DataLoggingNameMode	"SignalName"
+	      }
+	    }
+	    Block {
+	      BlockType		      Gain
+	      Name		      "Gain3"
+	      SID		      "6817"
+	      Position		      [280, 222, 340, 268]
+	      ShowName		      off
+	      FontName		      "Arial"
+	      FontSize		      12
+	      Gain		      "1/3"
+	      ParamDataTypeStr	      "Inherit: Inherit via internal rule"
+	      OutDataTypeStr	      "Inherit: Inherit via internal rule"
+	      SaturateOnIntegerOverflow	off
+	      Port {
+		PortNumber		1
+		Name			"vc"
+		RTWStorageClass		"Auto"
+		DataLoggingNameMode	"SignalName"
+	      }
+	    }
+	    Block {
+	      BlockType		      Sum
+	      Name		      "Sum1"
+	      SID		      "6818"
+	      Ports		      [2, 1]
+	      Position		      [225, 69, 245, 136]
+	      ShowName		      off
+	      FontName		      "Arial"
+	      FontSize		      12
+	      Inputs		      "+-"
+	      InputSameDT	      off
+	      OutDataTypeStr	      "Inherit: Inherit via internal rule"
+	      SaturateOnIntegerOverflow	off
+	    }
+	    Block {
+	      BlockType		      Sum
+	      Name		      "Sum2"
+	      SID		      "6819"
+	      Ports		      [2, 1]
+	      Position		      [225, 139, 245, 206]
+	      ShowName		      off
+	      FontName		      "Arial"
+	      FontSize		      12
+	      Inputs		      "+-"
+	      InputSameDT	      off
+	      OutDataTypeStr	      "Inherit: Inherit via internal rule"
+	      SaturateOnIntegerOverflow	off
+	    }
+	    Block {
+	      BlockType		      Sum
+	      Name		      "Sum3"
+	      SID		      "6820"
+	      Ports		      [2, 1]
+	      Position		      [225, 209, 245, 276]
+	      ShowName		      off
+	      FontName		      "Arial"
+	      FontSize		      12
+	      Inputs		      "+-"
+	      InputSameDT	      off
+	      OutDataTypeStr	      "Inherit: Inherit via internal rule"
+	      SaturateOnIntegerOverflow	off
+	    }
+	    Block {
+	      BlockType		      Outport
+	      Name		      "vabcpn"
+	      SID		      "6821"
+	      Position		      [480, 168, 510, 182]
+	      FontName		      "Arial"
+	      FontSize		      12
+	      IconDisplay	      "Port number"
+	    }
+	    Line {
+	      SrcBlock		      "Bus\nCreator"
+	      SrcPort		      1
+	      DstBlock		      "vabcpn"
+	      DstPort		      1
+	    }
+	    Line {
+	      SrcBlock		      "vabcll"
+	      SrcPort		      1
+	      DstBlock		      "Bus\nSelector"
+	      DstPort		      1
+	    }
+	    Line {
+	      Name		      "<signal1>"
+	      Labels		      [0, 0]
+	      SrcBlock		      "Bus\nSelector"
+	      SrcPort		      1
+	      Points		      [50, 0]
+	      Branch {
+		DstBlock		"Sum1"
+		DstPort			1
+	      }
+	      Branch {
+		Points			[0, 105]
+		DstBlock		"Sum2"
+		DstPort			2
+	      }
+	    }
+	    Line {
+	      Name		      "<signal3>"
+	      Labels		      [0, 0]
+	      SrcBlock		      "Bus\nSelector"
+	      SrcPort		      3
+	      Points		      [40, 0]
+	      Branch {
+		Points			[0, -105]
+		DstBlock		"Sum1"
+		DstPort			2
+	      }
+	      Branch {
+		DstBlock		"Sum3"
+		DstPort			1
+	      }
+	    }
+	    Line {
+	      SrcBlock		      "Sum1"
+	      SrcPort		      1
+	      Points		      [0, -5]
+	      DstBlock		      "Gain2"
+	      DstPort		      1
+	    }
+	    Line {
+	      Name		      "<signal2>"
+	      Labels		      [0, 0]
+	      SrcBlock		      "Bus\nSelector"
+	      SrcPort		      2
+	      Points		      [55, 0]
+	      Branch {
+		DstBlock		"Sum2"
+		DstPort			1
+	      }
+	      Branch {
+		Points			[0, 105]
+		DstBlock		"Sum3"
+		DstPort			2
+	      }
+	    }
+	    Line {
+	      SrcBlock		      "Sum2"
+	      SrcPort		      1
+	      DstBlock		      "Gain1"
+	      DstPort		      1
+	    }
+	    Line {
+	      SrcBlock		      "Sum3"
+	      SrcPort		      1
+	      DstBlock		      "Gain3"
+	      DstPort		      1
+	    }
+	    Line {
+	      Name		      "va"
+	      Labels		      [0, 0]
+	      SrcBlock		      "Gain2"
+	      SrcPort		      1
+	      Points		      [30, 0]
+	      DstBlock		      "Bus\nCreator"
+	      DstPort		      1
+	    }
+	    Line {
+	      Name		      "vb"
+	      Labels		      [0, 0]
+	      SrcBlock		      "Gain1"
+	      SrcPort		      1
+	      DstBlock		      "Bus\nCreator"
+	      DstPort		      2
+	    }
+	    Line {
+	      Name		      "vc"
+	      Labels		      [0, 0]
+	      SrcBlock		      "Gain3"
+	      SrcPort		      1
+	      Points		      [30, 0]
+	      DstBlock		      "Bus\nCreator"
+	      DstPort		      3
+	    }
+	    Annotation {
+	      Position		      [147, 91]
+	    }
+	  }
+	}
+	Block {
+	  BlockType		  Reference
+	  Name			  "vm vab"
+	  SID			  "6822"
+	  Ports			  [0, 1, 0, 0, 0, 2]
+	  Position		  [785, 113, 810, 137]
+	  ShowName		  off
+	  LibraryVersion	  "1.2088"
+	  FontName		  "Verdana"
+	  FontSize		  11
+	  SourceBlock		  "powerlib/Measurements/Voltage Measurement"
+	  SourceType		  "Voltage Measurement"
+	  PhasorSimulation	  off
+	  OutputType		  "Complex"
+	  PSBequivalent		  "0"
+	}
+	Block {
+	  BlockType		  Reference
+	  Name			  "vm vab1"
+	  SID			  "6823"
+	  Ports			  [0, 1, 0, 0, 0, 2]
+	  Position		  [120, 243, 145, 267]
+	  ShowName		  off
+	  LibraryVersion	  "1.2088"
+	  FontName		  "Verdana"
+	  FontSize		  11
+	  SourceBlock		  "powerlib/Measurements/Voltage Measurement"
+	  SourceType		  "Voltage Measurement"
+	  PhasorSimulation	  off
+	  OutputType		  "Complex"
+	  PSBequivalent		  "0"
+	}
+	Block {
+	  BlockType		  Reference
+	  Name			  "vm vab2"
+	  SID			  "7387"
+	  Ports			  [0, 1, 0, 0, 0, 2]
+	  Position		  [515, 43, 540, 67]
+	  ShowName		  off
+	  LibraryVersion	  "1.2088"
+	  FontName		  "Verdana"
+	  FontSize		  11
+	  SourceBlock		  "powerlib/Measurements/Voltage Measurement"
+	  SourceType		  "Voltage Measurement"
+	  PhasorSimulation	  off
+	  OutputType		  "Complex"
+	  PSBequivalent		  "0"
+	}
+	Block {
+	  BlockType		  Reference
+	  Name			  "vm vbc"
+	  SID			  "6824"
+	  Ports			  [0, 1, 0, 0, 0, 2]
+	  Position		  [815, 168, 840, 192]
+	  ShowName		  off
+	  LibraryVersion	  "1.2088"
+	  FontName		  "Verdana"
+	  FontSize		  11
+	  SourceBlock		  "powerlib/Measurements/Voltage Measurement"
+	  SourceType		  "Voltage Measurement"
+	  PhasorSimulation	  off
+	  OutputType		  "Complex"
+	  PSBequivalent		  "0"
+	}
+	Block {
+	  BlockType		  PMIOPort
+	  Name			  "Va"
+	  SID			  "6825"
+	  Tag			  "PMCPort"
+	  Position		  [641, 15, 659, 45]
+	  BlockRotation		  270
+	  BlockMirror		  on
+	  NamePlacement		  "alternate"
+	  FontName		  "Verdana"
+	  FontSize		  11
+	  Port			  "1"
+	  Side			  "Right"
+	}
+	Block {
+	  BlockType		  PMIOPort
+	  Name			  "Vb"
+	  SID			  "6826"
+	  Tag			  "PMCPort"
+	  Position		  [691, 15, 709, 45]
+	  BlockRotation		  270
+	  BlockMirror		  on
+	  NamePlacement		  "alternate"
+	  FontName		  "Verdana"
+	  FontSize		  11
+	  Port			  "2"
+	  Side			  "Right"
+	}
+	Block {
+	  BlockType		  PMIOPort
+	  Name			  "Vc"
+	  SID			  "6827"
+	  Tag			  "PMCPort"
+	  Position		  [741, 15, 759, 45]
+	  BlockRotation		  270
+	  BlockMirror		  on
+	  NamePlacement		  "alternate"
+	  FontName		  "Verdana"
+	  FontSize		  11
+	  Port			  "3"
+	  Side			  "Right"
+	}
+	Block {
+	  BlockType		  PMIOPort
+	  Name			  "Vdc_+"
+	  SID			  "6828"
+	  Tag			  "PMCPort"
+	  Position		  [30, 86, 60, 104]
+	  FontName		  "Verdana"
+	  FontSize		  11
+	  Port			  "4"
+	  Side			  "Left"
+	}
+	Block {
+	  BlockType		  PMIOPort
+	  Name			  "Vdc_-"
+	  SID			  "6829"
+	  Tag			  "PMCPort"
+	  Position		  [30, 191, 60, 209]
+	  FontName		  "Verdana"
+	  FontSize		  11
+	  Port			  "5"
+	  Side			  "Left"
+	}
+	Block {
+	  BlockType		  Outport
+	  Name			  "Sensor_Signal"
+	  SID			  "6830"
+	  Position		  [205, 448, 235, 462]
+	  IconDisplay		  "Port number"
+	}
+	Line {
+	  LineType		  "Connection"
+	  SrcBlock		  "cm1"
+	  SrcPort		  RConn1
+	  Points		  [85, 0]
+	  Branch {
+	    ConnectType		    "DEST_SRC"
+	    Points		    [10, 0]
+	    Branch {
+	      ConnectType	      "DEST_SRC"
+	      DstBlock		      "Va"
+	      DstPort		      RConn1
+	    }
+	    Branch {
+	      ConnectType	      "DEST_SRC"
+	      Points		      [105, 0]
+	      Branch {
+		ConnectType		"DEST_SRC"
+		DstBlock		"vm vab"
+		DstPort			LConn1
+	      }
+	      Branch {
+		ConnectType		"DEST_SRC"
+		Points			[5, 0; 0, 65]
+		DstBlock		"vm vbc"
+		DstPort			LConn2
+	      }
+	    }
+	  }
+	  Branch {
+	    ConnectType		    "DEST_SRC"
+	    DstBlock		    "L5"
+	    DstPort		    LConn1
+	  }
+	}
+	Line {
+	  LineType		  "Connection"
+	  SrcBlock		  "cm2"
+	  SrcPort		  RConn1
+	  Points		  [120, 0]
+	  Branch {
+	    ConnectType		    "DEST_SRC"
+	    Points		    [25, 0]
+	    Branch {
+	      ConnectType	      "DEST_DEST"
+	      SrcBlock		      "vm vab"
+	      SrcPort		      LConn2
+	      Points		      [-5, 0; 0, 45; -65, 0]
+	    }
+	    Branch {
+	      ConnectType	      "DEST_DEST"
+	      SrcBlock		      "Vb"
+	      SrcPort		      RConn1
+	      Points		      [0, 115]
+	    }
+	  }
+	  Branch {
+	    ConnectType		    "DEST_SRC"
+	    DstBlock		    "L4"
+	    DstPort		    LConn1
+	  }
+	}
+	Line {
+	  LineType		  "Connection"
+	  SrcBlock		  "L1"
+	  SrcPort		  LConn1
+	  Points		  [-5, 0]
+	  DstBlock		  "IGBT_module"
+	  DstPort		  LConn1
+	}
+	Line {
+	  LineType		  "Connection"
+	  SrcBlock		  "L1"
+	  SrcPort		  RConn1
+	  DstBlock		  "cm1"
+	  DstPort		  LConn1
+	}
+	Line {
+	  LineType		  "Connection"
+	  SrcBlock		  "L2"
+	  SrcPort		  RConn1
+	  DstBlock		  "cm2"
+	  DstPort		  LConn1
+	}
+	Line {
+	  SrcBlock		  "cm1"
+	  SrcPort		  1
+	  DstBlock		  "Goto5"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "From8"
+	  SrcPort		  1
+	  DstBlock		  "IGBT_module"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "Mux2"
+	  SrcPort		  1
+	  DstBlock		  "iabc"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "Mux3"
+	  SrcPort		  1
+	  Points		  [10, 0]
+	  Branch {
+	    DstBlock		    "vabc3"
+	    DstPort		    1
+	  }
+	  Branch {
+	    Points		    [0, 50]
+	    DstBlock		    "vll2vpn"
+	    DstPort		    1
+	  }
+	}
+	Line {
+	  SrcBlock		  "From15"
+	  SrcPort		  1
+	  DstBlock		  "Mux2"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "From10"
+	  SrcPort		  1
+	  DstBlock		  "Mux2"
+	  DstPort		  2
+	}
+	Line {
+	  SrcBlock		  "From11"
+	  SrcPort		  1
+	  DstBlock		  "Mux2"
+	  DstPort		  3
+	}
+	Line {
+	  SrcBlock		  "From12"
+	  SrcPort		  1
+	  Points		  [5, 0]
+	  Branch {
+	    DstBlock		    "Mux3"
+	    DstPort		    1
+	  }
+	  Branch {
+	    Points		    [0, -25]
+	    DstBlock		    "RMS"
+	    DstPort		    1
+	  }
+	}
+	Line {
+	  SrcBlock		  "From13"
+	  SrcPort		  1
+	  DstBlock		  "Mux3"
+	  DstPort		  2
+	}
+	Line {
+	  SrcBlock		  "From14"
+	  SrcPort		  1
+	  DstBlock		  "Mux3"
+	  DstPort		  3
+	}
+	Line {
+	  Name			  "ia"
+	  Labels		  [0, 0]
+	  SrcBlock		  "From20"
+	  SrcPort		  1
+	  DstBlock		  "Bus\nCreator"
+	  DstPort		  1
+	}
+	Line {
+	  Name			  "ib"
+	  Labels		  [0, 0]
+	  SrcBlock		  "From21"
+	  SrcPort		  1
+	  DstBlock		  "Bus\nCreator"
+	  DstPort		  2
+	}
+	Line {
+	  Name			  "ic"
+	  Labels		  [0, 0]
+	  SrcBlock		  "From22"
+	  SrcPort		  1
+	  DstBlock		  "Bus\nCreator"
+	  DstPort		  3
+	}
+	Line {
+	  SrcBlock		  "Bus\nCreator"
+	  SrcPort		  1
+	  DstBlock		  "Goto10"
+	  DstPort		  1
+	}
+	Line {
+	  Name			  "vab"
+	  Labels		  [0, 0]
+	  SrcBlock		  "From23"
+	  SrcPort		  1
+	  DstBlock		  "Bus\nCreator1"
+	  DstPort		  1
+	}
+	Line {
+	  Name			  "vbc"
+	  Labels		  [0, 0]
+	  SrcBlock		  "From24"
+	  SrcPort		  1
+	  DstBlock		  "Bus\nCreator1"
+	  DstPort		  2
+	}
+	Line {
+	  Name			  "vca"
+	  Labels		  [0, 0]
+	  SrcBlock		  "From25"
+	  SrcPort		  1
+	  DstBlock		  "Bus\nCreator1"
+	  DstPort		  3
+	}
+	Line {
+	  SrcBlock		  "Bus\nCreator1"
+	  SrcPort		  1
+	  DstBlock		  "Goto11"
+	  DstPort		  1
+	}
+	Line {
+	  LineType		  "Connection"
+	  Points		  [385, 170; 0, -120; 115, 0]
+	  DstBlock		  "vm vab2"
+	  DstPort		  LConn1
+	  Branch {
+	    ConnectType		    "SRC_DEST"
+	    SrcBlock		    "IGBT_module"
+	    SrcPort		    LConn2
+	    Points		    [5, 0]
+	  }
+	  Branch {
+	    ConnectType		    "SRC_SRC"
+	    DstBlock		    "L2"
+	    DstPort		    LConn1
+	  }
+	}
+	Line {
+	  LineType		  "Connection"
+	  SrcBlock		  "L3"
+	  SrcPort		  LConn1
+	  Points		  [0, -5]
+	  Branch {
+	    ConnectType		    "DEST_SRC"
+	    DstBlock		    "IGBT_module"
+	    DstPort		    LConn3
+	  }
+	  Branch {
+	    ConnectType		    "DEST_SRC"
+	    Points		    [0, -135; 105, 0; 0, -25]
+	    DstBlock		    "vm vab2"
+	    DstPort		    LConn2
+	  }
+	}
+	Line {
+	  LineType		  "Connection"
+	  SrcBlock		  "Vdc_+"
+	  SrcPort		  RConn1
+	  Points		  [15, 0]
+	  Branch {
+	    ConnectType		    "DEST_SRC"
+	    Points		    [110, 0]
+	    Branch {
+	      ConnectType	      "DEST_SRC"
+	      DstBlock		      "IGBT_module"
+	      DstPort		      RConn1
+	    }
+	    Branch {
+	      ConnectType	      "DEST_SRC"
+	      Points		      [0, 16]
+	    }
+	  }
+	  Branch {
+	    ConnectType		    "DEST_SRC"
+	    Points		    [0, 155]
+	    DstBlock		    "vm vab1"
+	    DstPort		    LConn1
+	  }
+	}
+	Line {
+	  LineType		  "Connection"
+	  Points		  [200, 200; -95, 0]
+	  Branch {
+	    ConnectType		    "SRC_SRC"
+	    DstBlock		    "IGBT_module"
+	    DstPort		    RConn2
+	  }
+	  Branch {
+	    ConnectType		    "SRC_DEST"
+	    Points		    [200, 189; 0, 11]
+	  }
+	  Branch {
+	    ConnectType		    "DEST_SRC"
+	    DstBlock		    "Vdc_-"
+	    DstPort		    RConn1
+	  }
+	  Branch {
+	    ConnectType		    "DEST_SRC"
+	    DstBlock		    "vm vab1"
+	    DstPort		    LConn2
+	  }
+	}
+	Line {
+	  SrcBlock		  "vll2vpn"
+	  SrcPort		  1
+	  DstBlock		  "vabc1"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "RMS"
+	  SrcPort		  1
+	  DstBlock		  "Display"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "cm2"
+	  SrcPort		  1
+	  DstBlock		  "Goto6"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "vm vab"
+	  SrcPort		  1
+	  DstBlock		  "Goto1"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "vm vbc"
+	  SrcPort		  1
+	  DstBlock		  "Goto3"
+	  DstPort		  1
+	}
+	Line {
+	  LineType		  "Connection"
+	  SrcBlock		  "L3"
+	  SrcPort		  RConn1
+	  Points		  [225, 0]
+	  Branch {
+	    ConnectType		    "DEST_SRC"
+	    Points		    [40, 0]
+	    Branch {
+	      ConnectType	      "DEST_SRC"
+	      DstBlock		      "Vc"
+	      DstPort		      RConn1
+	    }
+	    Branch {
+	      ConnectType	      "DEST_SRC"
+	      Points		      [0, -5; 35, 0; 0, -45]
+	      DstBlock		      "vm vbc"
+	      DstPort		      LConn1
+	    }
+	  }
+	  Branch {
+	    ConnectType		    "DEST_SRC"
+	    DstBlock		    "L6"
+	    DstPort		    LConn1
+	  }
+	}
+	Line {
+	  SrcBlock		  "vm vab1"
+	  SrcPort		  1
+	  DstBlock		  "Goto7"
+	  DstPort		  1
+	}
+	Line {
+	  Name			  "ia"
+	  Labels		  [0, 0]
+	  SrcBlock		  "From3"
+	  SrcPort		  1
+	  DstBlock		  "Mux1"
+	  DstPort		  1
+	}
+	Line {
+	  Name			  "ib"
+	  Labels		  [0, 0]
+	  SrcBlock		  "From1"
+	  SrcPort		  1
+	  DstBlock		  "Mux1"
+	  DstPort		  2
+	}
+	Line {
+	  Name			  "vab"
+	  Labels		  [0, 0]
+	  SrcBlock		  "From6"
+	  SrcPort		  1
+	  DstBlock		  "Mux1"
+	  DstPort		  3
+	}
+	Line {
+	  Name			  "vca"
+	  Labels		  [0, 0]
+	  SrcBlock		  "From7"
+	  SrcPort		  1
+	  DstBlock		  "Mux1"
+	  DstPort		  4
+	}
+	Line {
+	  Name			  "vdc"
+	  Labels		  [0, 0]
+	  SrcBlock		  "From26"
+	  SrcPort		  1
+	  DstBlock		  "Mux1"
+	  DstPort		  5
+	}
+	Line {
+	  SrcBlock		  "Mux1"
+	  SrcPort		  1
+	  DstBlock		  "Sensor_Signal"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "In1"
+	  SrcPort		  1
+	  DstBlock		  "Goto8"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "Add5"
+	  SrcPort		  1
+	  DstBlock		  "Goto12"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "From16"
+	  SrcPort		  1
+	  DstBlock		  "Add5"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "From17"
+	  SrcPort		  1
+	  DstBlock		  "Add5"
+	  DstPort		  2
+	}
+	Line {
+	  SrcBlock		  "Add1"
+	  SrcPort		  1
+	  DstBlock		  "Goto4"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "From18"
+	  SrcPort		  1
+	  DstBlock		  "Add1"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "From19"
+	  SrcPort		  1
+	  DstBlock		  "Add1"
+	  DstPort		  2
+	}
+	Line {
+	  LineType		  "Connection"
+	  SrcBlock		  "L5"
+	  SrcPort		  RConn1
+	  Points		  [0, 10; 35, 0]
+	  Branch {
+	    ConnectType		    "DEST_SRC"
+	    Points		    [35, 0]
+	    DstBlock		    "L6"
+	    DstPort		    RConn1
+	  }
+	  Branch {
+	    ConnectType		    "DEST_DEST"
+	    SrcBlock		    "L4"
+	    SrcPort		    RConn1
+	    Points		    [0, 10]
+	  }
+	}
+	Line {
+	  SrcBlock		  "vm vab2"
+	  SrcPort		  1
+	  Points		  [5, 0; 0, 5]
+	  DstBlock		  "iabc1"
+	  DstPort		  1
+	}
+      }
+    }
+    Block {
+      BlockType		      Reference
+      Name		      "Vdc"
+      SID		      "6831"
+      Ports		      [0, 0, 0, 0, 0, 1, 1]
+      Position		      [203, 140, 217, 160]
+      BlockRotation	      270
+      LibraryVersion	      "1.2088"
+      FontName		      "Verdana"
+      FontSize		      11
+      SourceBlock	      "powerlib/Electrical\nSources/DC Voltage Source"
+      SourceType	      "DC Voltage Source"
+      Amplitude		      "Vdc"
+      Measurements	      "None"
+    }
+    Block {
+      BlockType		      Reference
+      Name		      "Vsa"
+      SID		      "7175"
+      Ports		      [0, 0, 0, 0, 0, 1, 1]
+      Position		      [745, 78, 780, 102]
+      BlockMirror	      on
+      NamePlacement	      "alternate"
+      LibraryVersion	      "1.2088"
+      FontName		      "Verdana"
+      FontSize		      11
+      SourceBlock	      "powerlib/Electrical\nSources/AC Voltage Source"
+      SourceType	      "AC Voltage Source"
+      Amplitude		      "Vsm"
+      Phase		      "90"
+      Frequency		      "f"
+      SampleTime	      "0"
+      Measurements	      "None"
+    }
+    Block {
+      BlockType		      Reference
+      Name		      "Vsb"
+      SID		      "7176"
+      Ports		      [0, 0, 0, 0, 0, 1, 1]
+      Position		      [745, 128, 780, 152]
+      BlockMirror	      on
+      NamePlacement	      "alternate"
+      LibraryVersion	      "1.2088"
+      FontName		      "Verdana"
+      FontSize		      11
+      SourceBlock	      "powerlib/Electrical\nSources/AC Voltage Source"
+      SourceType	      "AC Voltage Source"
+      Amplitude		      "Vsm"
+      Phase		      "90-120"
+      Frequency		      "f"
+      SampleTime	      "0"
+      Measurements	      "None"
+    }
+    Block {
+      BlockType		      Reference
+      Name		      "Vsc"
+      SID		      "7177"
+      Ports		      [0, 0, 0, 0, 0, 1, 1]
+      Position		      [745, 178, 780, 202]
+      BlockMirror	      on
+      NamePlacement	      "alternate"
+      LibraryVersion	      "1.2088"
+      FontName		      "Verdana"
+      FontSize		      11
+      SourceBlock	      "powerlib/Electrical\nSources/AC Voltage Source"
+      SourceType	      "AC Voltage Source"
+      Amplitude		      "Vsm"
+      Phase		      "90+120"
+      Frequency		      "f"
+      SampleTime	      "0"
+      Measurements	      "None"
+    }
+    Block {
+      BlockType		      Reference
+      Name		      "cm1"
+      SID		      "7154"
+      Ports		      [0, 1, 0, 0, 0, 1, 1]
+      Position		      [580, 73, 605, 97]
+      ShowName		      off
+      LibraryVersion	      "1.2088"
+      FontName		      "Verdana"
+      FontSize		      11
+      SourceBlock	      "powerlib/Measurements/Current Measurement"
+      SourceType	      "Current Measurement"
+      PhasorSimulation	      off
+      OutputType	      "Complex"
+      PSBequivalent	      "0"
+    }
+    Block {
+      BlockType		      Reference
+      Name		      "cm2"
+      SID		      "7167"
+      Ports		      [0, 1, 0, 0, 0, 1, 1]
+      Position		      [580, 123, 605, 147]
+      ShowName		      off
+      LibraryVersion	      "1.2088"
+      FontName		      "Verdana"
+      FontSize		      11
+      SourceBlock	      "powerlib/Measurements/Current Measurement"
+      SourceType	      "Current Measurement"
+      PhasorSimulation	      off
+      OutputType	      "Complex"
+      PSBequivalent	      "0"
+    }
+    Block {
+      BlockType		      Reference
+      Name		      "cm3"
+      SID		      "7169"
+      Ports		      [0, 1, 0, 0, 0, 1, 1]
+      Position		      [580, 173, 605, 197]
+      ShowName		      off
+      LibraryVersion	      "1.2088"
+      FontName		      "Verdana"
+      FontSize		      11
+      SourceBlock	      "powerlib/Measurements/Current Measurement"
+      SourceType	      "Current Measurement"
+      PhasorSimulation	      off
+      OutputType	      "Complex"
+      PSBequivalent	      "0"
+    }
+    Block {
+      BlockType		      S-Function
+      Name		      "ex_sfun_ctrl_VSI_AFE"
+      SID		      "7144"
+      Ports		      [24, 10]
+      Position		      [265, 319, 375, 716]
+      FunctionName	      "ex_sfun_ctrl_VSI_AFE"
+      EnableBusSupport	      off
+      MaskType		      "Legacy Function"
+      MaskDescription	      "This block allows you to call the legacy functions specified by the following Legacy Code"
+      " Tool definition:\ndef.SFunctionName = 'ex_sfun_ctrl_VSI_AFE';\ndef.OutputFcnSpec = 'void epwm1_isr(double y1[1]"
+      ", double y2[1], double y3[1], double y4[1], double y5[1], double y6[1], double y7[1], double y8[1], double y9[1]"
+      ", double u1, double u2, double u3, double u4, double u5, double u6, double u7, double u8, double u9, double u10)"
+      "';\ndef.HeaderFiles = {'math.h'};\ndef.SourceFiles = {'epwm1_isr.c'};\ndef.SampleTime = 5e-005;\n"
+      MaskHelp		      "<p>This block was generated automatically by the Legacy Code Tool. For detailed help on this to"
+      "ol, call<a href=\"matlab:legacy_code('help')\"> legacy_code('help')</a>.</p>"
+      MaskPromptString	      "SFunctionSpec|Display function specification"
+      MaskStyleString	      "edit,checkbox"
+      MaskVariables	      "SFunctionSpec=&1;ShowSpec=@2"
+      MaskTunableValueString  "off,on"
+      MaskCallbackString      "|if strcmp(get_param(gcbh, 'ShowSpec'), 'on')\n  set_param(gcbh, 'MaskDisplay', sprintf"
+      "('fprintf(''%s'');', get_param(gcbh, 'SFunctionSpec')));\nelse\n  set_param(gcbh, 'MaskDisplay', sprintf('fprint"
+      "f(''%s'');', get_param(gcbh, 'FunctionName')));\nend"
+      MaskEnableString	      "on,on"
+      MaskVisibilityString    "off,on"
+      MaskToolTipString	      "on,on"
+      MaskSelfModifiable      on
+      MaskDisplay	      "fprintf('ex_sfun_ctrl_VSI_AFE');"
+      MaskIconFrame	      on
+      MaskIconOpaque	      on
+      MaskIconRotate	      "port"
+      MaskPortRotate	      "default"
+      MaskIconUnits	      "normalized"
+      MaskValueString	      "void epwm1_isr(double y1[1], double y2[1], double y3[1], double y4[1], double y5[1], doub"
+      "le y6[1], double y7[1], double y8[1], double y9[1], double u1, double u2, double u3, double u4, double u5, doubl"
+      "e u6, double u7, double u8, double u9, double u10)|off"
+    }
+    Block {
+      BlockType		      Reference
+      Name		      "filter"
+      SID		      "6833"
+      Ports		      [1, 1]
+      Position		      [185, 244, 225, 266]
+      ShowName		      off
+      LibraryVersion	      "1.108"
+      SourceBlock	      "cstblocks/LTI System"
+      SourceType	      "LTI Block"
+      sys		      "tf_filter"
+      IC		      "[]"
+    }
+    Block {
+      BlockType		      Reference
+      Name		      "filter1"
+      SID		      "6834"
+      Ports		      [1, 1]
+      Position		      [185, 274, 225, 296]
+      ShowName		      off
+      LibraryVersion	      "1.108"
+      SourceBlock	      "cstblocks/LTI System"
+      SourceType	      "LTI Block"
+      sys		      "tf_filter"
+      IC		      "[]"
+    }
+    Block {
+      BlockType		      Reference
+      Name		      "filter2"
+      SID		      "6835"
+      Ports		      [1, 1]
+      Position		      [185, 304, 225, 326]
+      ShowName		      off
+      LibraryVersion	      "1.108"
+      SourceBlock	      "cstblocks/LTI System"
+      SourceType	      "LTI Block"
+      sys		      "tf_filter"
+      IC		      "[]"
+    }
+    Block {
+      BlockType		      Reference
+      Name		      "filter3"
+      SID		      "6836"
+      Ports		      [1, 1]
+      Position		      [185, 334, 225, 356]
+      ShowName		      off
+      LibraryVersion	      "1.108"
+      SourceBlock	      "cstblocks/LTI System"
+      SourceType	      "LTI Block"
+      sys		      "tf_filter"
+      IC		      "[]"
+    }
+    Block {
+      BlockType		      Reference
+      Name		      "filter4"
+      SID		      "6837"
+      Ports		      [1, 1]
+      Position		      [185, 364, 225, 386]
+      ShowName		      off
+      LibraryVersion	      "1.108"
+      SourceBlock	      "cstblocks/LTI System"
+      SourceType	      "LTI Block"
+      sys		      "tf_filter"
+      IC		      "[]"
+    }
+    Block {
+      BlockType		      Reference
+      Name		      "filter5"
+      SID		      "7008"
+      Ports		      [1, 1]
+      Position		      [185, 394, 225, 416]
+      ShowName		      off
+      LibraryVersion	      "1.108"
+      SourceBlock	      "cstblocks/LTI System"
+      SourceType	      "LTI Block"
+      sys		      "tf_filter"
+      IC		      "[]"
+    }
+    Block {
+      BlockType		      Reference
+      Name		      "filter6"
+      SID		      "7009"
+      Ports		      [1, 1]
+      Position		      [185, 424, 225, 446]
+      ShowName		      off
+      LibraryVersion	      "1.108"
+      SourceBlock	      "cstblocks/LTI System"
+      SourceType	      "LTI Block"
+      sys		      "tf_filter"
+      IC		      "[]"
+    }
+    Block {
+      BlockType		      Reference
+      Name		      "filter7"
+      SID		      "7010"
+      Ports		      [1, 1]
+      Position		      [185, 454, 225, 476]
+      ShowName		      off
+      LibraryVersion	      "1.108"
+      SourceBlock	      "cstblocks/LTI System"
+      SourceType	      "LTI Block"
+      sys		      "tf_filter"
+      IC		      "[]"
+    }
+    Block {
+      BlockType		      Reference
+      Name		      "filter8"
+      SID		      "7011"
+      Ports		      [1, 1]
+      Position		      [185, 484, 225, 506]
+      ShowName		      off
+      LibraryVersion	      "1.108"
+      SourceBlock	      "cstblocks/LTI System"
+      SourceType	      "LTI Block"
+      sys		      "tf_filter"
+      IC		      "[]"
+    }
+    Block {
+      BlockType		      Reference
+      Name		      "filter9"
+      SID		      "7012"
+      Ports		      [1, 1]
+      Position		      [185, 514, 225, 536]
+      ShowName		      off
+      LibraryVersion	      "1.108"
+      SourceBlock	      "cstblocks/LTI System"
+      SourceType	      "LTI Block"
+      sys		      "tf_filter"
+      IC		      "[]"
+    }
+    Block {
+      BlockType		      Scope
+      Name		      "fpll"
+      SID		      "7179"
+      Ports		      [2]
+      Position		      [475, 645, 505, 725]
+      NamePlacement	      "alternate"
+      Floating		      off
+      Location		      [356, 472, 1046, 880]
+      Open		      off
+      NumInputPorts	      "2"
+      ZoomMode		      "xonly"
+      List {
+	ListType		AxesTitles
+	axes1			"%<SignalLabel>"
+	axes2			"%<SignalLabel>"
+      }
+      List {
+	ListType		ScopeGraphics
+	FigureColor		"[0.5 0.5 0.5]"
+	AxesColor		"[0 0 0]"
+	AxesTickColor		"[1 1 1]"
+	LineColors		"[1 1 0;1 0 1;0 1 1;1 0 0;0 1 0;0 0 1]"
+	LineStyles		"-|-|-|-|-|-"
+	LineWidths		"[0.5 0.5 0.5 0.5 0.5 0.5]"
+	MarkerStyles		"none|none|none|none|none|none"
+      }
+      TimeRange		      "0.3"
+      YMin		      "-984~-6.7"
+      YMax		      "-981.25~-5.5"
+      SaveToWorkspace	      on
+      SaveName		      "f_pll"
+      DataFormat	      "StructureWithTime"
+      LimitDataPoints	      off
+      SampleTime	      "0"
+    }
+    Block {
+      BlockType		      Scope
+      Name		      "fpll1"
+      SID		      "7181"
+      Ports		      [1]
+      Position		      [695, 298, 720, 332]
+      NamePlacement	      "alternate"
+      Floating		      off
+      Location		      [124, 63, 1130, 391]
+      Open		      off
+      NumInputPorts	      "1"
+      ZoomMode		      "yonly"
+      List {
+	ListType		AxesTitles
+	axes1			"%<SignalLabel>"
+      }
+      List {
+	ListType		ScopeGraphics
+	FigureColor		"[0.5 0.5 0.5]"
+	AxesColor		"[0 0 0]"
+	AxesTickColor		"[1 1 1]"
+	LineColors		"[1 1 0;1 0 1;0 1 1;1 0 0;0 1 0;0 0 1]"
+	LineStyles		"-|-|-|-|-|-"
+	LineWidths		"[0.5 0.5 0.5 0.5 0.5 0.5]"
+	MarkerStyles		"none|none|none|none|none|none"
+      }
+      TimeRange		      "0.5             "
+      YMin		      "358.141"
+      YMax		      "395.841"
+      SaveName		      "ia_L1"
+      DataFormat	      "StructureWithTime"
+      LimitDataPoints	      off
+      SampleTime	      "0"
+    }
+    Block {
+      BlockType		      Reference
+      Name		      "powergui"
+      SID		      "6992"
+      Ports		      []
+      Position		      [885, 30, 951, 69]
+      NamePlacement	      "alternate"
+      Priority		      "1"
+      LibraryVersion	      "1.2088"
+      UserDataPersistent      on
+      UserData		      "DataTag0"
+      FontName		      "Verdana"
+      SourceBlock	      "powerlib/powergui"
+      SourceType	      "PSB option menu block"
+      SimulationMode	      "Continuous"
+      SolverType	      "Tustin"
+      SampleTime	      "50e-6"
+      frequency		      "60"
+      SPID		      on
+      DisableSnubberDevices   off
+      DisableRonSwitches      off
+      DisableVfSwitches	      off
+      SwTol		      "0"
+      Interpol		      off
+      DisplayEquations	      off
+      FunctionMessages	      off
+      frequencyindice	      "0"
+      Pbase		      "100e6"
+      ErrMax		      "1e-4"
+      Iterations	      "50"
+      UnitsV		      "kV"
+      UnitsW		      "MW"
+      echomessages	      off
+      HookPort		      off
+      EnableUseOfTLC	      off
+      x0status		      "blocks"
+      RestoreLinks	      "warning"
+      ResistiveCurrentMeasurement off
+      Frange		      "[0:2:500]"
+      Ylog		      off
+      Xlog		      on
+      ShowGrid		      off
+      save		      off
+      variable		      "ZData"
+      structure		      "ia_L"
+      ZoomFFT		      on
+      StartTime		      "0.1"
+      cycles		      "1"
+      DisplayStyle	      "1"
+      fundamental	      "400"
+      FreqAxis		      off
+      MaxFrequency	      "100000"
+      frequencyindicesteady   "400"
+      RmsSteady		      "1"
+      display		      off
+      Ts		      "0"
+      methode		      off
+    }
+    Block {
+      BlockType		      Scope
+      Name		      "scope"
+      SID		      "6841"
+      Ports		      [2]
+      Position		      [685, 621, 750, 719]
+      NamePlacement	      "alternate"
+      ShowName		      off
+      Floating		      off
+      Location		      [670, 60, 1361, 423]
+      Open		      off
+      NumInputPorts	      "2"
+      List {
+	ListType		AxesTitles
+	axes1			"%<SignalLabel>"
+	axes2			"%<SignalLabel>"
+      }
+      List {
+	ListType		ScopeGraphics
+	FigureColor		"[0.5 0.5 0.5]"
+	AxesColor		"[0 0 0]"
+	AxesTickColor		"[1 1 1]"
+	LineColors		"[1 1 0;1 0 1;0 1 1;1 0 0;0 1 0;0 0 1]"
+	LineStyles		"-|-|-|-|-|-"
+	LineWidths		"[0.5 0.5 0.5 0.5 0.5 0.5]"
+	MarkerStyles		"none|none|none|none|none|none"
+      }
+      TimeRange		      "0.3"
+      YMin		      "-100~-12.5"
+      YMax		      "100~12.5"
+      SaveToWorkspace	      on
+      SaveName		      "va_ia"
+      DataFormat	      "StructureWithTime"
+      LimitDataPoints	      off
+      MaxDataPoints	      "2000000"
+      SampleTime	      "0"
+    }
+    Block {
+      BlockType		      Scope
+      Name		      "scope1"
+      SID		      "7382"
+      Ports		      [1]
+      Position		      [720, 491, 785, 589]
+      NamePlacement	      "alternate"
+      ShowName		      off
+      Floating		      off
+      Location		      [127, 213, 818, 576]
+      Open		      off
+      NumInputPorts	      "1"
+      ZoomMode		      "xonly"
+      List {
+	ListType		AxesTitles
+	axes1			"%<SignalLabel>"
+      }
+      List {
+	ListType		ScopeGraphics
+	FigureColor		"[0.5 0.5 0.5]"
+	AxesColor		"[0 0 0]"
+	AxesTickColor		"[1 1 1]"
+	LineColors		"[1 1 0;1 0 1;0 1 1;1 0 0;0 1 0;0 0 1]"
+	LineStyles		"-|-|-|-|-|-"
+	LineWidths		"[0.5 0.5 0.5 0.5 0.5 0.5]"
+	MarkerStyles		"none|none|none|none|none|none"
+      }
+      TimeRange		      "0.03"
+      YMin		      "-125"
+      YMax		      "125"
+      SaveToWorkspace	      on
+      SaveName		      "va_ia1"
+      DataFormat	      "StructureWithTime"
+      LimitDataPoints	      off
+      MaxDataPoints	      "2000000"
+      SampleTime	      "0"
+    }
+    Block {
+      BlockType		      Reference
+      Name		      "vm1"
+      SID		      "7163"
+      Ports		      [0, 1, 0, 0, 0, 2]
+      Position		      [145, 133, 170, 157]
+      BlockMirror	      on
+      ShowName		      off
+      LibraryVersion	      "1.2088"
+      FontName		      "Verdana"
+      FontSize		      11
+      SourceBlock	      "powerlib/Measurements/Voltage Measurement"
+      SourceType	      "Voltage Measurement"
+      PhasorSimulation	      off
+      OutputType	      "Complex"
+      PSBequivalent	      "0"
+    }
+    Block {
+      BlockType		      Reference
+      Name		      "vm5"
+      SID		      "6842"
+      Ports		      [0, 1, 0, 0, 0, 2]
+      Position		      [460, 58, 485, 82]
+      NamePlacement	      "alternate"
+      ShowName		      off
+      LibraryVersion	      "1.2088"
+      FontName		      "Verdana"
+      FontSize		      11
+      SourceBlock	      "powerlib/Measurements/Voltage Measurement"
+      SourceType	      "Voltage Measurement"
+      PhasorSimulation	      off
+      OutputType	      "Complex"
+      PSBequivalent	      "0"
+    }
+    Block {
+      BlockType		      Reference
+      Name		      "vm6"
+      SID		      "6843"
+      Ports		      [0, 1, 0, 0, 0, 2]
+      Position		      [460, 103, 485, 127]
+      NamePlacement	      "alternate"
+      ShowName		      off
+      LibraryVersion	      "1.2088"
+      FontName		      "Verdana"
+      FontSize		      11
+      SourceBlock	      "powerlib/Measurements/Voltage Measurement"
+      SourceType	      "Voltage Measurement"
+      PhasorSimulation	      off
+      OutputType	      "Complex"
+      PSBequivalent	      "0"
+    }
+    Block {
+      BlockType		      Reference
+      Name		      "vm7"
+      SID		      "6844"
+      Ports		      [0, 1, 0, 0, 0, 2]
+      Position		      [460, 153, 485, 177]
+      NamePlacement	      "alternate"
+      ShowName		      off
+      LibraryVersion	      "1.2088"
+      FontName		      "Verdana"
+      FontSize		      11
+      SourceBlock	      "powerlib/Measurements/Voltage Measurement"
+      SourceType	      "Voltage Measurement"
+      PhasorSimulation	      off
+      OutputType	      "Complex"
+      PSBequivalent	      "0"
+    }
+    Line {
+      LineType		      "Connection"
+      SrcBlock		      "VSI"
+      SrcPort		      LConn1
+      Points		      [-35, 0]
+      Branch {
+	ConnectType		"DEST_SRC"
+	DstBlock		"Vdc"
+	DstPort			RConn1
+      }
+      Branch {
+	ConnectType		"DEST_SRC"
+	Points			[-25, 0]
+	DstBlock		"vm1"
+	DstPort			LConn1
+      }
+    }
+    Line {
+      LineType		      "Connection"
+      SrcBlock		      "VSI"
+      SrcPort		      LConn2
+      Points		      [-35, 0]
+      Branch {
+	ConnectType		"DEST_SRC"
+	DstBlock		"Vdc"
+	DstPort			LConn1
+      }
+      Branch {
+	ConnectType		"DEST_SRC"
+	Points			[-25, 0]
+	DstBlock		"vm1"
+	DstPort			LConn2
+      }
+    }
+    Line {
+      SrcBlock		      "vm5"
+      SrcPort		      1
+      DstBlock		      "Goto10"
+      DstPort		      1
+    }
+    Line {
+      SrcBlock		      "vm6"
+      SrcPort		      1
+      DstBlock		      "Goto11"
+      DstPort		      1
+    }
+    Line {
+      SrcBlock		      "vm7"
+      SrcPort		      1
+      DstBlock		      "Goto12"
+      DstPort		      1
+    }
+    Line {
+      SrcBlock		      "From12"
+      SrcPort		      1
+      DstBlock		      "Mux6"
+      DstPort		      1
+    }
+    Line {
+      SrcBlock		      "From13"
+      SrcPort		      1
+      DstBlock		      "Mux6"
+      DstPort		      2
+    }
+    Line {
+      SrcBlock		      "From14"
+      SrcPort		      1
+      DstBlock		      "Mux6"
+      DstPort		      3
+    }
+    Line {
+      Name		      "VSI_Vabc"
+      Labels		      [-1, 0]
+      SrcBlock		      "Mux6"
+      SrcPort		      1
+      DstBlock		      "scope"
+      DstPort		      1
+    }
+    Line {
+      SrcBlock		      "Unit Delay"
+      SrcPort		      1
+      DstBlock		      "Centered_PWM_Generator"
+      DstPort		      1
+    }
+    Line {
+      SrcBlock		      "Unit Delay1"
+      SrcPort		      1
+      DstBlock		      "Centered_PWM_Generator"
+      DstPort		      2
+    }
+    Line {
+      SrcBlock		      "Unit Delay2"
+      SrcPort		      1
+      DstBlock		      "Centered_PWM_Generator"
+      DstPort		      3
+    }
+    Line {
+      Name		      "ia_vsi"
+      Labels		      [0, 0]
+      SrcBlock		      "Demux"
+      SrcPort		      1
+      DstBlock		      "filter"
+      DstPort		      1
+    }
+    Line {
+      Name		      "ib_vsi"
+      Labels		      [0, 0]
+      SrcBlock		      "Demux"
+      SrcPort		      2
+      DstBlock		      "filter1"
+      DstPort		      1
+    }
+    Line {
+      Name		      "vab_vsi"
+      Labels		      [0, 0]
+      SrcBlock		      "Demux"
+      SrcPort		      3
+      DstBlock		      "filter2"
+      DstPort		      1
+    }
+    Line {
+      Name		      "vca_vsi"
+      Labels		      [0, 0]
+      SrcBlock		      "Demux"
+      SrcPort		      4
+      DstBlock		      "filter3"
+      DstPort		      1
+    }
+    Line {
+      Name		      "vdc_vsi"
+      Labels		      [0, 0]
+      SrcBlock		      "Demux"
+      SrcPort		      5
+      DstBlock		      "filter4"
+      DstPort		      1
+    }
+    Line {
+      SrcBlock		      "VSI"
+      SrcPort		      1
+      DstBlock		      "Goto1"
+      DstPort		      1
+    }
+    Line {
+      SrcBlock		      "From1"
+      SrcPort		      1
+      DstBlock		      "Demux"
+      DstPort		      1
+    }
+    Line {
+      SrcBlock		      "From8"
+      SrcPort		      1
+      DstBlock		      "VSI"
+      DstPort		      1
+    }
+    Line {
+      Name		      "ia_afe"
+      Labels		      [0, 0]
+      SrcBlock		      "Demux1"
+      SrcPort		      1
+      DstBlock		      "filter5"
+      DstPort		      1
+    }
+    Line {
+      Name		      "ib_afe"
+      Labels		      [0, 0]
+      SrcBlock		      "Demux1"
+      SrcPort		      2
+      DstBlock		      "filter6"
+      DstPort		      1
+    }
+    Line {
+      Name		      "vab_afe"
+      Labels		      [0, 0]
+      SrcBlock		      "Demux1"
+      SrcPort		      3
+      DstBlock		      "filter7"
+      DstPort		      1
+    }
+    Line {
+      Name		      "vbc_afe"
+      Labels		      [0, 0]
+      SrcBlock		      "Demux1"
+      SrcPort		      4
+      DstBlock		      "filter8"
+      DstPort		      1
+    }
+    Line {
+      Name		      "vdc_afe"
+      Labels		      [0, 0]
+      SrcBlock		      "Demux1"
+      SrcPort		      5
+      DstBlock		      "filter9"
+      DstPort		      1
+    }
+    Line {
+      SrcBlock		      "From9"
+      SrcPort		      1
+      DstBlock		      "Demux1"
+      DstPort		      1
+    }
+    Line {
+      SrcBlock		      "ex_sfun_ctrl_VSI_AFE"
+      SrcPort		      1
+      Points		      [0, -30]
+      DstBlock		      "Unit Delay"
+      DstPort		      1
+    }
+    Line {
+      SrcBlock		      "ex_sfun_ctrl_VSI_AFE"
+      SrcPort		      2
+      Points		      [0, -35]
+      DstBlock		      "Unit Delay1"
+      DstPort		      1
+    }
+    Line {
+      SrcBlock		      "ex_sfun_ctrl_VSI_AFE"
+      SrcPort		      3
+      Points		      [0, -40]
+      DstBlock		      "Unit Delay2"
+      DstPort		      1
+    }
+    Line {
+      SrcBlock		      "filter"
+      SrcPort		      1
+      Points		      [20, 0]
+      DstBlock		      "ex_sfun_ctrl_VSI_AFE"
+      DstPort		      1
+    }
+    Line {
+      SrcBlock		      "filter1"
+      SrcPort		      1
+      Points		      [20, 0]
+      DstBlock		      "ex_sfun_ctrl_VSI_AFE"
+      DstPort		      2
+    }
+    Line {
+      SrcBlock		      "filter2"
+      SrcPort		      1
+      Points		      [0, 60]
+      DstBlock		      "ex_sfun_ctrl_VSI_AFE"
+      DstPort		      3
+    }
+    Line {
+      SrcBlock		      "filter3"
+      SrcPort		      1
+      Points		      [0, 45]
+      DstBlock		      "ex_sfun_ctrl_VSI_AFE"
+      DstPort		      4
+    }
+    Line {
+      SrcBlock		      "filter4"
+      SrcPort		      1
+      Points		      [0, 30]
+      DstBlock		      "ex_sfun_ctrl_VSI_AFE"
+      DstPort		      5
+    }
+    Line {
+      SrcBlock		      "filter5"
+      SrcPort		      1
+      Points		      [0, 15]
+      DstBlock		      "ex_sfun_ctrl_VSI_AFE"
+      DstPort		      6
+    }
+    Line {
+      SrcBlock		      "filter6"
+      SrcPort		      1
+      DstBlock		      "ex_sfun_ctrl_VSI_AFE"
+      DstPort		      7
+    }
+    Line {
+      SrcBlock		      "filter7"
+      SrcPort		      1
+      Points		      [20, 0]
+      DstBlock		      "ex_sfun_ctrl_VSI_AFE"
+      DstPort		      8
+    }
+    Line {
+      SrcBlock		      "filter8"
+      SrcPort		      1
+      Points		      [0, -30]
+      DstBlock		      "ex_sfun_ctrl_VSI_AFE"
+      DstPort		      9
+    }
+    Line {
+      SrcBlock		      "filter9"
+      SrcPort		      1
+      Points		      [20, 0]
+      DstBlock		      "ex_sfun_ctrl_VSI_AFE"
+      DstPort		      10
+    }
+    Line {
+      LineType		      "Connection"
+      SrcBlock		      "VSI"
+      SrcPort		      RConn3
+      Points		      [60, 0; 0, -5]
+      Branch {
+	ConnectType		"DEST_SRC"
+	Points			[0, -25]
+	DstBlock		"vm7"
+	DstPort			LConn1
+      }
+      Branch {
+	ConnectType		"DEST_SRC"
+	DstBlock		"cm3"
+	DstPort			LConn1
+      }
+    }
+    Line {
+      LineType		      "Connection"
+      SrcBlock		      "VSI"
+      SrcPort		      RConn2
+      Points		      [50, 0; 0, -5]
+      Branch {
+	ConnectType		"DEST_SRC"
+	Points			[0, -25]
+	DstBlock		"vm6"
+	DstPort			LConn1
+      }
+      Branch {
+	ConnectType		"DEST_SRC"
+	DstBlock		"cm2"
+	DstPort			LConn1
+      }
+    }
+    Line {
+      LineType		      "Connection"
+      SrcBlock		      "cm1"
+      SrcPort		      LConn1
+      Points		      [-140, 0; 0, 5; -25, 0]
+      Branch {
+	ConnectType		"DEST_DEST"
+	SrcBlock		"VSI"
+	SrcPort			RConn1
+	Points			[40, 0]
+      }
+      Branch {
+	ConnectType		"DEST_SRC"
+	Points			[0, -25]
+	DstBlock		"vm5"
+	DstPort			LConn1
+      }
+    }
+    Line {
+      SrcBlock		      "cm1"
+      SrcPort		      1
+      DstBlock		      "Goto5"
+      DstPort		      1
+    }
+    Line {
+      SrcBlock		      "vm1"
+      SrcPort		      1
+      DstBlock		      "Goto3"
+      DstPort		      1
+    }
+    Line {
+      SrcBlock		      "cm2"
+      SrcPort		      1
+      DstBlock		      "Goto2"
+      DstPort		      1
+    }
+    Line {
+      SrcBlock		      "cm3"
+      SrcPort		      1
+      DstBlock		      "Goto4"
+      DstPort		      1
+    }
+    Line {
+      Name		      "VSI_Iabc"
+      Labels		      [0, 0]
+      SrcBlock		      "Mux1"
+      SrcPort		      1
+      DstBlock		      "scope"
+      DstPort		      2
+    }
+    Line {
+      SrcBlock		      "From2"
+      SrcPort		      1
+      DstBlock		      "Mux1"
+      DstPort		      1
+    }
+    Line {
+      SrcBlock		      "From4"
+      SrcPort		      1
+      DstBlock		      "Mux1"
+      DstPort		      2
+    }
+    Line {
+      SrcBlock		      "From5"
+      SrcPort		      1
+      DstBlock		      "Mux1"
+      DstPort		      3
+    }
+    Line {
+      LineType		      "Connection"
+      Points		      [805, 140; 0, -50; -10, 0]
+      DstBlock		      "Vsa"
+      DstPort		      LConn1
+      Branch {
+	ConnectType		"SRC_SRC"
+	Points			[0, 50]
+	DstBlock		"Vsc"
+	DstPort			LConn1
+      }
+      Branch {
+	ConnectType		"SRC_SRC"
+	DstBlock		"Vsb"
+	DstPort			LConn1
+      }
+      Branch {
+	ConnectType		"SRC_SRC"
+	DstBlock		"Ground"
+	DstPort			LConn1
+      }
+    }
+    Line {
+      SrcBlock		      "Product"
+      SrcPort		      1
+      Points		      [15, 0]
+      Branch {
+	DstBlock		"Goto8"
+	DstPort			1
+      }
+      Branch {
+	Points			[0, -40]
+	DstBlock		"fpll1"
+	DstPort			1
+      }
+    }
+    Line {
+      SrcBlock		      "Centered_PWM_Generator"
+      SrcPort		      1
+      DstBlock		      "Product"
+      DstPort		      1
+    }
+    Line {
+      LineType		      "Connection"
+      Points		      [440, 120; 0, 50]
+      Branch {
+	ConnectType		"SRC_DEST"
+	SrcBlock		"vm5"
+	SrcPort			LConn2
+	Points			[-5, 0; 0, 45]
+      }
+      Branch {
+	ConnectType		"SRC_SRC"
+	DstBlock		"vm6"
+	DstPort			LConn2
+      }
+      Branch {
+	ConnectType		"DEST_SRC"
+	Points			[0, 35]
+	DstBlock		"Ground1"
+	DstPort			LConn1
+      }
+      Branch {
+	ConnectType		"DEST_SRC"
+	DstBlock		"vm7"
+	DstPort			LConn2
+      }
+    }
+    Line {
+      SrcBlock		      "ex_sfun_ctrl_VSI_AFE"
+      SrcPort		      4
+      Points		      [220, 0]
+      DstBlock		      "Product"
+      DstPort		      2
+    }
+    Line {
+      SrcBlock		      "ex_sfun_ctrl_VSI_AFE"
+      SrcPort		      9
+      Points		      [80, 0]
+      DstBlock		      "fpll"
+      DstPort		      1
+    }
+    Line {
+      LineType		      "Connection"
+      SrcBlock		      "Vsa"
+      SrcPort		      RConn1
+      DstBlock		      "cm1"
+      DstPort		      RConn1
+    }
+    Line {
+      LineType		      "Connection"
+      SrcBlock		      "Vsb"
+      SrcPort		      RConn1
+      DstBlock		      "cm2"
+      DstPort		      RConn1
+    }
+    Line {
+      LineType		      "Connection"
+      SrcBlock		      "Vsc"
+      SrcPort		      RConn1
+      DstBlock		      "cm3"
+      DstPort		      RConn1
+    }
+    Line {
+      SrcBlock		      "Constant"
+      SrcPort		      1
+      Points		      [80, 0; 0, -55]
+      DstBlock		      "ex_sfun_ctrl_VSI_AFE"
+      DstPort		      11
+    }
+    Line {
+      SrcBlock		      "Constant1"
+      SrcPort		      1
+      Points		      [160, 0]
+      DstBlock		      "ex_sfun_ctrl_VSI_AFE"
+      DstPort		      12
+    }
+    Line {
+      SrcBlock		      "Constant2"
+      SrcPort		      1
+      Points		      [80, 0; 0, -55]
+      DstBlock		      "ex_sfun_ctrl_VSI_AFE"
+      DstPort		      13
+    }
+    Line {
+      SrcBlock		      "Constant3"
+      SrcPort		      1
+      Points		      [80, 0; 0, -55]
+      DstBlock		      "ex_sfun_ctrl_VSI_AFE"
+      DstPort		      14
+    }
+    Line {
+      SrcBlock		      "Constant4"
+      SrcPort		      1
+      Points		      [70, 0; 0, -55]
+      DstBlock		      "ex_sfun_ctrl_VSI_AFE"
+      DstPort		      15
+    }
+    Line {
+      SrcBlock		      "Constant5"
+      SrcPort		      1
+      Points		      [60, 0; 0, -55]
+      DstBlock		      "ex_sfun_ctrl_VSI_AFE"
+      DstPort		      16
+    }
+    Line {
+      SrcBlock		      "Constant6"
+      SrcPort		      1
+      Points		      [80, 0; 0, -55]
+      DstBlock		      "ex_sfun_ctrl_VSI_AFE"
+      DstPort		      17
+    }
+    Line {
+      SrcBlock		      "Constant7"
+      SrcPort		      1
+      Points		      [160, 0]
+      DstBlock		      "ex_sfun_ctrl_VSI_AFE"
+      DstPort		      18
+    }
+    Line {
+      SrcBlock		      "Constant8"
+      SrcPort		      1
+      Points		      [135, 0; 0, -55]
+      DstBlock		      "ex_sfun_ctrl_VSI_AFE"
+      DstPort		      19
+    }
+    Line {
+      SrcBlock		      "Constant9"
+      SrcPort		      1
+      Points		      [120, 0; 0, -55]
+      DstBlock		      "ex_sfun_ctrl_VSI_AFE"
+      DstPort		      20
+    }
+    Line {
+      SrcBlock		      "Constant10"
+      SrcPort		      1
+      Points		      [75, 0; 0, -55]
+      DstBlock		      "ex_sfun_ctrl_VSI_AFE"
+      DstPort		      21
+    }
+    Line {
+      SrcBlock		      "Constant11"
+      SrcPort		      1
+      Points		      [160, 0]
+      DstBlock		      "ex_sfun_ctrl_VSI_AFE"
+      DstPort		      22
+    }
+    Line {
+      SrcBlock		      "ex_sfun_ctrl_VSI_AFE"
+      SrcPort		      10
+      Points		      [80, 0]
+      DstBlock		      "fpll"
+      DstPort		      2
+    }
+    Line {
+      SrcBlock		      "Constant12"
+      SrcPort		      1
+      Points		      [135, 0; 0, -55]
+      DstBlock		      "ex_sfun_ctrl_VSI_AFE"
+      DstPort		      23
+    }
+    Line {
+      SrcBlock		      "Constant13"
+      SrcPort		      1
+      Points		      [150, 0; 0, -55]
+      DstBlock		      "ex_sfun_ctrl_VSI_AFE"
+      DstPort		      24
+    }
+    Line {
+      SrcBlock		      "From6"
+      SrcPort		      1
+      DstBlock		      "Gain"
+      DstPort		      1
+    }
+    Line {
+      SrcBlock		      "Mux2"
+      SrcPort		      1
+      DstBlock		      "scope1"
+      DstPort		      1
+    }
+    Line {
+      SrcBlock		      "From3"
+      SrcPort		      1
+      DstBlock		      "Mux2"
+      DstPort		      2
+    }
+    Line {
+      SrcBlock		      "Gain"
+      SrcPort		      1
+      DstBlock		      "Mux2"
+      DstPort		      1
+    }
+  }
+}
+MatData {
+  NumRecords		  1
+  DataRecord {
+    Tag			    DataTag0
+    Data		    "  %)30     .    , ,   8    (     @         %    \"     $    !     0         %  0 #     $   \"$    <&]W9"
+    "7)G=6D     <W1E861Y<W1A=&4 :6YI='-T871E<P  ;&]A9&9L;W<     ;'1I=FEE=P      >FUE=&5R        9F9T=&]O;       <F5P;W)"
+    "T        :'ES=&5R97-I<P  ;&EN97!A<F%M    ;&]A9&9L;W=N97<       X    P    !@    @    &          4    (             "
+    "  !          D         #@   #     &    \"     8         !0    @               $         \"0         .    ,     8  "
+    "  (    !@         %    \"                0         )          X    P    !@    @    &          4    (              "
+    " !          D         #@   #     &    \"     8         !0    @               $         \"0         .    ,     8   "
+    " (    !@         %    \"                0         )          X    X    !@    @    &          4    (     0    $    "
+    "!          D    (         @!:T$ .    ,     8    (    !@         %    \"                0         )          X    P"
+    "    !@    @    &          4    (               !          D         #@   #     &    \"     8         !0    @      "
+    "         $         \"0         .    ,     8    (    !@         %    \"                0         )          "
+  }
+}

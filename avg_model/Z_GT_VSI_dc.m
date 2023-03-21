@@ -1,0 +1,11 @@
+P   = 1e3;
+Q   = 1e3;
+Vd  = 99.6;
+Vq  = 0;
+Id  = (P*Vd+Q*Vq)/(Vd^2+Vq^2);
+Iq  = (P*Vq-Q*Vd)/(Vd^2+Vq^2);
+Im  = Id^2+Iq^2;
+Zdd = 20*log10(abs(P/Im - 2*Id*(Id*P + Iq*Q)/Im^2))
+Zdq = 20*log10(abs(Q/Im - 2*Iq*(Id*P + Iq*Q)/Im^2))
+Zqd = 20*log10(abs(-Q/Im - 2*Id*(Iq*P - Id*Q)/Im^2))
+Zqq = 20*log10(abs(P/Im - 2*Iq*(Iq*P - Id*Q)/Im^2))
